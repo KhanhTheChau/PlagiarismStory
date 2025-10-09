@@ -1,0 +1,1 @@
+# Hệ thống phát hiện đạo văn trong truyện.
