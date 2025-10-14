@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Kết quả - Plagiarism Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Kết quả kiểm tra</h1>
+    <p>Đã kiểm tra <strong>{{ limit_lines }}</strong> dòng đầu (hoặc ít hơn nếu PDF ngắn hơn).</p>
+    <p>Tỉ lệ nghi đạo văn: <strong>{{ percent }}%</strong></p>
+
+    <div class="controls">
+      <a href="{{ url_for('index') }}">← Quay lại</a>
+    </div>
+
+    <div id="result-box" class="paper">
+      <!-- highlighted_text đã là HTML-safe và chứa <br> -->
+      {{ highlighted_text | safe }}
+    </div>
+
+    <h3>Chi tiết các dòng đã kiểm tra</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Dòng (tóm tắt)</th>
+          <th>Plagiarized</th>
+          <th>Nguồn</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in details %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td style="max-width:600px;"><code>{{ d.line }}</code></td>
+          <td>{{ "Yes" if d.plagiarized else "No" }}</td>
+          <td>
+            {% if d.sources %}
+              <ul>
+                {% for s in d.sources %}
+                  <li><a href="{{ s }}" target="_blank" rel="noreferrer">{{ s }}</a></li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              -
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Hiển thị tooltip của nguồn khi hover hoặc click vào đoạn bị đánh dấu
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('mark.plag').forEach(el => {
+        const sources = el.getAttribute('data-sources') || '';
+        if (!sources) return;
+        el.title = sources; // tooltip mặc định của trình duyệt
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', () => {
+          alert("Nguồn:\n" + sources.replace(/\s*\|\s*/g, "\n"));
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

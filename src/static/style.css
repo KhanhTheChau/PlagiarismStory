@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f7fb;
+    color: #222;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.paper {
+    white-space: pre-wrap;
+    background: #fcfcff;
+    border: 1px solid #e6e8ef;
+    padding: 16px;
+    margin-top: 12px;
+    border-radius: 6px;
+    line-height: 1.55;
+    font-family: "Times New Roman", Times, serif;
+}
+
+mark.plag {
+    background: #ffcccb;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+table th,
+table td {
+    border: 1px solid #e3e6ef;
+    padding: 8px;
+    text-align: left;
+}
+
+.flash {
+    background: #ffe9d6;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.note {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.controls {
+    margin: 8px 0;
+}
+
+.row {
+    margin: 8px 0;
+}
+
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #2b6cb0;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.95;
+}

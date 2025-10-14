@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Plagiarism Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Plagiarism Checker (PDF)</h1>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for m in messages %}
+            <div>{{ m }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+      <label>Chọn file PDF:</label>
+      <input type="file" name="file" accept="application/pdf" required>
+
+      <div class="row">
+        <label><input type="checkbox" name="remove_chapters" checked> Bỏ tiêu đề CHƯƠNG 1, CHƯƠNG II...</label>
+      </div>
+
+      <div class="row">
+        <label>Số dòng tối đa kiểm tra (để demo/quota):</label>
+        <input type="number" name="limit_lines" value="30" min="1" max="500">
+      </div>
+
+      <button type="submit">Kiểm tra</button>
+    </form>
+
+    <p class="note">Ghi chú: app giữ nguyên bố cục PDF khi hiển thị. Để gọi Google Custom Search, cập nhật API_KEYS &amp; CX_IDS trong <code>app.py</code>.</p>
+  </div>
+</body>
+</html>
