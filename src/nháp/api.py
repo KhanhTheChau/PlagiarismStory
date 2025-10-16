@@ -42,45 +42,47 @@ def split_sentences(text):
             result.append(sentence)
     return result
 
-def search_sentence(sentence):
+def search_sentence(sentence, num_results):
     driver = setup_driver()
     if not driver:
         return [], "Lỗi: Không thể khởi tạo WebDriver"
 
-    results = []
+    data = [{"sentence": sentence, "results": []}]
     try:
         encoded_sentence = urllib.parse.quote(sentence)
-        url = f"https://www.bing.com/search?q={encoded_sentence}&count=5"
+        url = f"https://www.bing.com/search?q={encoded_sentence}&count={num_results}"
         if len(url) > 2048:
-            return results, f"Lỗi: URL quá dài ({len(url)} ký tự)"
+            return data, f"Lỗi: URL quá dài ({len(url)} ký tự)"
         
         driver.get(url)
-        time.sleep(random.uniform(3, 5)) 
+        time.sleep(random.uniform(2, 4))  # Đợi ngẫu nhiên để tránh bị chặn
 
         if "captcha" in driver.current_url.lower() or "sorry" in driver.current_url.lower():
-            return results, "Lỗi: Bị chặn bởi CAPTCHA"
+            return data, "Lỗi: Bị chặn bởi CAPTCHA"
 
         soup = BeautifulSoup(driver.page_source, "lxml")
-        blocks = soup.find_all("li", class_="b_algo")[:2]
+        blocks = soup.find_all("li", class_="b_algo")[:num_results]
 
         for block in blocks:
             a = block.find("a", href=True)
             h2 = block.find("h2")
             snippet = block.find("p")
-            results.append({
+            data[0]["results"].append({
                 "title": h2.get_text(strip=True) if h2 else "N/A",
                 "link": a['href'] if a else "N/A",
-                "snippet": snippet.get_text(strip=True) if snippet else "N/A"
+                "snippet": snippet.get_text(strip=True) if snippet else "N/A",
+                "has_plagiarism": False
             })
 
-        return results, "Thành công"
-    except Exception:
-        return results, "Lỗi: Không thể tải trang hoặc xử lý kết quả"
+        return data, "Thành công"
+    except Exception as e:
+        return data, f"Lỗi: Không thể tải trang hoặc xử lý kết quả ({str(e)})"
     finally:
         if driver:
             driver.quit()
 
 def analyze_serp_structure(query):
+    num_results = 5  # Số url cần lấy cho mỗi câu
     all_results = []
     seen_links = set()
     query_sentences = split_sentences(query)
@@ -89,13 +91,19 @@ def analyze_serp_structure(query):
         return [], ""
     for i, sentence in enumerate(query_sentences, 1):
         print(f"\nCâu {i}: {sentence}")
-        results, status = search_sentence(sentence)
+        results, status = search_sentence(sentence, num_results)
         print(f"Trạng thái: {status}")
-        for result in results:
-            if result["link"] not in seen_links:
-                seen_links.add(result["link"])
-                all_results.append(result)
-                print(json.dumps(result, ensure_ascii=False, indent=4))
+        if results and len(results) > 0:  
+            result_group = results[0] 
+            if result_group["sentence"] == sentence:  
+                for result in result_group["results"]:  
+                    if result["link"] not in seen_links:
+                        seen_links.add(result["link"])
+                        all_results.append({
+                            "sentence": sentence,
+                            "results": [result]
+                        })
+                        print(json.dumps({"sentence": sentence, "results": [result]}, ensure_ascii=False, indent=4))
     with open("result.json", "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=4)
     print("\nĐã lưu kết quả vào result.json")
@@ -104,7 +112,7 @@ def analyze_serp_structure(query):
 if __name__ == "__main__":
     try:
         query = ""
-        with open("output.txt", "r", encoding="utf-8") as f:
+        with open("outputtest.txt", "r", encoding="utf-8") as f:
             query = f.read().strip()
         analyze_serp_structure(query)
     except Exception as e:
