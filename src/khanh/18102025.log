@@ -1,0 +1,73 @@
+Kiểm tra batch 1 (2 câu)...
+📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzxbWlXTBsXfm2yW41Q8vL9Kd41op6Qq5JUVI-P6PJu5qnyJ9a_1SDBlV6mroOGUWV-GgaFFsDcRFA8ewbHAr47XatXF10eR9bRv4AlPOMJgB6N78HZY4sAJUAH0Blzye3Bf401JLfVJ9uHhwvIo5SysQ-fkRKDw3XLOnrelENQKg=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC06jF7z8KqobmPWXjomIoVF9ha3kxx_h1b5qV4ahpQce_GDCbqU7-nN2XRObFiuhG53a7cvQVCZw5RCc8hU_vuBpFFe6uL8utRW3lHwjnI2MS7LSJ1f7Hofmg9mpbVLfs_W-MghCGmiOks0qCmT6Ovi2SMZQOtDh8NoB1RA9a89FpjOU=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk8MwlMv1UTHuaF_vdJUenxgWyRCgFy0tuHIk9R9W-dC6Wy6HmTQdwO9B4wFllW3dnZsc4IGL6SwEzZwbDI770r5cypF_2pzK7mW8s21-zxbtyn8sEvD-fKFmoxpyPyeWem4IlHpo61KA2AEKdmXhqawmTx_8AvSZnL8ecoCOKgoGQ8hoZ4-toAlLznVsIpXvo_Infyyg=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFyrnD2tCiuBE2A1AXljT7KubK8t2Q42oHe5aRxctPFtQj1ipFLkOwi-s8cC3rUIgoDtMmcg78vHwJNssTlR3t8OLXbitSxL9nSKMfDoiheXrg1hqOHH4-kMlrwqacVwIMiE6kr3TpsEuQ4TO393nr9wSx5Q==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2khlebVwWslKMF4j4HpustrTbX2O9MZnFsaw97F0TSCjmGBRz6spJyKQ_Af35PmbKMvgDJSRrbH4AfACjZ48wIqTcoZWrHAARTurAZYf3i06PhbzzQpyowwadRFF8dyRpdccIQWkdGe56Au-QHoRX3P4Tp0l3-C9n7Z8f73o="]
+},
+{
+"query": "Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzxbWlXTBsXfm2yW41Q8vL9Kd41op6Qq5JUVI-P6PJu5qnyJ9a_1SDBlV6mroOGUWV-GgaFFsDcRFA8ewbHAr47XatXF10eR9bRv4AlPOMJgB6N78HZY4sAJUAH0Blzye3Bf401JLfVJ9uHhwvIo5SysQ-fkRKDw3XLOnrelENQKg=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRHOO0TKBJCStsdGjJY7ulKFwjpis7-iPtUZHkbaftpHf9M_bHMapXoi8bs5Rkex87f_w17ciyqAAZrROyGXaqsDCL4JHPEXqSFiFgUUdjl3Tf4tONJXoxnYY4LlyXGRdq3pA0QDZ4mmR4ObUxyvnaUHloO2Tz", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlleItqIDdQwIXeKOp2tHxfVKr4c93Sd_GqKSFbbfOrAC8dcC2jzw581bDJSwlkkFXIEbnREnzTAt2MSf9anBoq-1glmTPKioBMjsotnb1A3y0nDp0l1iiVRK4kUkkWkt7tiQauh2tnQM=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC06jF7z8KqobmPWXjomIoVF9ha3kxx_h1b5qV4ahpQce_GDCbqU7-nN2XRObFiuhG53a7cvQVCZw5RCc8hU_vuBpFFe6uL8utRW3lHwjnI2MS7LSJ1f7Hofmg9mpbVLfs_W-MghCGmiOks0qCmT6Ovi2SMZQOtDh8NoB1RA9a89FpjOU=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk8MwlMv1UTHuaF_vdJUenxgWyRCgFy0tuHIk9R9W-dC6Wy6HmTQdwO9B4wFllW3dnZsc4IGL6SwEzZwbDI770r5cypF_2pzK7mW8s21-zxbtyn8sEvD-fKFmoxpyPyeWem4IlHpo61KA2AEKdmXhqawmTx_8AvSZnL8ecoCOKgoGQ8hoZ4-toAlLznVsIpXvo_Infyyg="]
+}
+]
+}
+```
+
+⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.
+
+🔍 Kiểm tra batch 2 (2 câu)...
+📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó.",
+"exists": false,
+"links": []
+},
+{
+"query": "Hạnh phúc không phải là đích đến mà là hành trình ta trải qua mỗi ngày.",
+"exists": true,
+"links": [
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLQVK83G52QZcUrmQ1qH69Dt4S8aJuXO3qVdIqVKEv4o01VQT7fO_rUProJ8lZnc4nMzqAPo0YUDk8GOa67rg8B0N3LFE0F3GXNHOzcC6miR_hNjoaPD5LzSAXZBekAhNtSXeVWsE=",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgH69gAO_oCTSE4M7pajfUysZsfdOUKn11TmZFPZw9SBSYYuSUYfK1Uh1GHvDTc8nh4ErS3PrpTsztNDCGqVc061mgSkYmgaig7sZ5XZ19X1C6aQTUzdTK98Zmqf1m-x4rFVpLBmf-XaiCaeuVVOUXjXc="
+]
+}
+]
+}
+```
+
+⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.
+
+🔍 Kiểm tra batch 3 (2 câu)...
+[⚠️ Lỗi] ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemma-3-12b is not found for API version v1beta, or is not supported for generatteContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+📄 Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "Thành công không đo bằng tiền bạc mà bằng sự hài lòng trong tâm hồn.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbd9HmCOXZzTa3P0TzKzFyo8vctGKao65jTrh2VQJdTmkrkEZGJRN2lbx9-sMMMVzBEE0NX8P1U-Kk3SbJj410XNMzdGF8q9dRQKf6SqgVJCI1MuVXHSqoYEx9FR0TGWuH3M5hRwF0JLDF-5F4BEj3ucYPvB9pKozBpNpkElb-unNfYEQ6qgYhiuYVq4Yq1Qk="
+      ]
+    },
+    {
+      "query": "Nếu tui là gia cát lượng thì tui đã không để cho ngươi làm việc này.",
+      "exists": false,
+      "links": []
+    }
+  ]
+}
+```
+
+⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.
+
+✅ Kết quả cuối cùng:
+{
+  "results": []
+}
