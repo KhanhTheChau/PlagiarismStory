@@ -4,19 +4,12 @@ import itertools
 import time
 import json
 import random
-import logging
-
-# ==========================================
-logging.basicConfig(
-    filename="check.log",
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    encoding="utf-8"
-)
+import re
 
 # ==========================================
 API_KEYS = [
-
+    "AIzaSyASkCLE9cQdpT92Bh3ATNRbmVwMRfo5WVs",
+    "AIzaSyAk4N7S067L5jcmr3kEfeTReA89XtFSJ4c",
 ]
 
 # ==========================================
@@ -41,38 +34,34 @@ def create_client():
 
 
 # ==========================================
-import json
-import re
+def safe_load_json(raw: str):
+    """Làm sạch chuỗi model trả về và parse JSON an toàn"""
+    if not raw or not isinstance(raw, str):
+        return None
 
-def extract_json_safe(response_text: str):
-    """
-    Tự động tìm và parse JSON từ chuỗi, bỏ qua text thừa, markdown, v.v.
-    """
+    # Loại bỏ markdown hoặc ký tự ```json
+    cleaned = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.MULTILINE)
+
+    # Tìm đoạn JSON đầu tiên trong text
+    match = re.search(r"\{[\s\S]*\}", cleaned)
+    if not match:
+        print("⚠️ Không tìm thấy JSON trong output.")
+        return None
+
+    json_str = match.group(0)
+
     try:
-        # 1️⃣ Thử parse trực tiếp
-        return json.loads(response_text)
-    except json.JSONDecodeError:
-        # 2️⃣ Nếu lỗi — cố tách phần JSON bằng regex
-        match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        if match:
-            json_str = match.group(0)
-            try:
-                return json.loads(json_str)
-            except json.JSONDecodeError:
-                pass
-        
-        # 3️⃣ Nếu vẫn lỗi — cố loại bỏ ký tự đặc biệt rồi parse lại
-        cleaned = response_text.replace('```json', '').replace('```', '').strip()
-        try:
-            return json.loads(cleaned)
-        except json.JSONDecodeError as e:
-            print("⚠️ Không thể parse JSON:", e)
-            print("Đoạn trả về bị lỗi:\n", response_text)
-            return None
-        
+        return json.loads(json_str)
+    except json.JSONDecodeError as e:
+        print(f"⚠️ JSONDecodeError: {e}")
+        print("----- RAW (preview) -----")
+        print(raw[:400])
+        print("--------------------------")
+        return None
+
+
 # ==========================================
 def check_sentences(sentences):
-
     client = create_client()
     model = next(model_cycle)
 
@@ -97,8 +86,7 @@ def check_sentences(sentences):
             Danh sách câu cần kiểm tra:
             {chr(10).join([f'{i+1}. "{s}"' for i, s in enumerate(sentences)])}
         """
-    logging.info(f"🔍 Batch bắt đầu | Model={model} | {len(sentences)} câu")
-    
+
     config = types.GenerateContentConfig(
         tools=[
             types.Tool(
@@ -113,11 +101,10 @@ def check_sentences(sentences):
             contents=prompt,
             config=config
         )
-        
         return response.text.strip()
 
     except Exception as e:
-        logging.warning("[⚠️ Lỗi]" +  {type(e).__name__} + ":" + {e})
+        print(f"[⚠️ Lỗi] {type(e).__name__}: {e}")
         # Nếu lỗi quota hoặc rate limit, thử lại với model khác và key khác
         time.sleep(random.uniform(2, 5))
         return check_sentences(sentences)
@@ -126,30 +113,23 @@ def check_sentences(sentences):
 # ==========================================
 def batch_check(all_sentences, batch_size=10):
     results = []
+
     for i in range(0, len(all_sentences), batch_size):
         batch = all_sentences[i:i + batch_size]
-        # print(f"\n🔍 Kiểm tra batch {i//batch_size + 1} ({len(batch)} câu)...")
-        logging.info(f"🔍 Kiểm tra batch {i//batch_size + 1} ({len(batch)} câu)")
+        print(f"\n🔍 Kiểm tra batch {i//batch_size + 1} ({len(batch)} câu)...")
 
-        raw_response = check_sentences(batch)
-        # print(f"📄 Raw response:\n{raw_response}\n")
-        logging.info(f"📄 Raw response:\n{raw_response}\n")
-        raw = extract_json_safe(raw_response)
-        logging.info(f"✅ raw: {raw}")
-        try:
-            data = json.loads(raw)
-            results.extend(data.get("results", []))
-        except json.JSONDecodeError:
-            # print("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
-            logging.warning("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
+        raw = check_sentences(batch)
+        print(f"📄 Raw response:\n{raw}\n")
+
+        data = safe_load_json(raw)
+        if data and "results" in data:
+            results.extend(data["results"])
+        else:
+            print("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
 
         time.sleep(random.uniform(3, 6))  # tránh giới hạn RPM
-    
-    with open("check_results.json", "w", encoding="utf-8") as f:
-        json.dump({"results": results}, f, ensure_ascii=False, indent=2)
-        
-    return {"results": results}
 
+    return {"results": results}
 
 
 # ==========================================
@@ -164,7 +144,5 @@ if __name__ == "__main__":
     ]
 
     final_result = batch_check(sentences, batch_size=2)
-    # print("\n✅ Kết quả cuối cùng:")
-    logging.info("\n✅ Kết quả cuối cùng:")
-    # print(json.dumps(final_result, ensure_ascii=False, indent=2))
-    logging.info(json.dumps(final_result, ensure_ascii=False, indent=2))
+    print("\n✅ Kết quả cuối cùng:")
+    print(json.dumps(final_result, ensure_ascii=False, indent=2))
