@@ -10,19 +10,20 @@ import random
 import os
 
 
-
+# =============================
+# Cấu hình trình duyệt Edge
+# =============================
 def setup_driver(proxy=None):
     s = Service('./msedgedriver.exe')
     options = Options()
     options.use_chromium = True
-    options.add_argument("--headless=new")  
+    options.add_argument("--headless=new")
     options.add_argument("--window-size=1000,800")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--lang=vi-VN")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-blink-features=AutomationControlled")
-
 
     ua_list = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/141.0.0.0 Safari/537.36",
@@ -45,95 +46,168 @@ def setup_driver(proxy=None):
         return None
 
 
-def split_sentences(text, output_file="sentences_list.json"):
-    # 1️⃣ Chuẩn hóa văn bản
+# =============================
+# Tách câu văn tiếng Việt
+# =============================
+def split_sentences(text, output_file="sentences_list.json", max_len=400):
     text = re.sub(r'\s+', ' ', text.strip())
 
-    # 2️⃣ Regex tách câu theo . ? ! (kể cả khi không có khoảng trắng sau dấu)
-    sentences = re.split(r'(?<=[.!?])(?=\s+|[A-ZÀ-Ỹ(“"])', text)
+    sentences = re.split(r'(?<=[.!?])\s+(?=[A-ZÀ-Ỹ“(])', text)
 
     result = []
 
-    # 3️⃣ Duyệt từng câu
     for sentence in sentences:
         sentence = sentence.strip()
         if not sentence:
             continue
 
-        # 4️⃣ Cắt câu quá dài nếu cần
-        while len(urllib.parse.quote(sentence)) > 1800:
+        while len(sentence) > max_len or len(urllib.parse.quote(sentence)) > 1800:
             mid = len(sentence) // 2
+
+            # Tìm điểm tách gần giữa — ưu tiên dấu câu
             split_point = max(
                 sentence.rfind('.', 0, mid),
                 sentence.rfind(',', 0, mid),
                 sentence.rfind(' ', 0, mid)
             )
-            if split_point == -1:
+
+            # Nếu không tìm thấy vị trí phù hợp, chia đôi thẳng
+            if split_point == -1 or split_point < 50:
                 split_point = mid
-            part = sentence[:split_point+1].strip()
-            result.append(part)
-            sentence = sentence[split_point+1:].strip()
+
+            part1 = sentence[:split_point + 1].strip()
+            part2 = sentence[split_point + 1:].strip()
+
+            print(f"⚠️ Câu dài, tách làm 2 phần:\n  1️⃣ {part1[:100]}...\n  2️⃣ {part2[:100]}...")
+
+            if part1:
+                result.append(part1)
+
+            # Tiếp tục xử lý phần còn lại (có thể vẫn dài)
+            sentence = part2
 
         if sentence:
             result.append(sentence)
 
-    # 5️⃣ Ghi file JSON (UTF-8, dạng danh sách câu)
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
-    print(f"Tách được {len(result)} câu hợp lệ. Đã ghi vào '{output_file}'.")
+    print(f"Đã tách được {len(result)} câu hợp lệ và lưu vào '{output_file}'.")
     return result
 
 
-
-
+# =============================
+# Tìm kiếm từng câu trên Bing
+# =============================
 def search_sentence(sentence, num_results=5, proxy=None):
     driver = setup_driver(proxy)
     if not driver:
-        return [], "Không thể khởi tạo WebDriver"
+        return [{"sentence": sentence, "results": [], "error": "Không thể khởi tạo WebDriver"}]
 
     data = [{"sentence": sentence, "results": []}]
     try:
-        encoded_sentence = urllib.parse.quote(sentence)
+        query = f'"{sentence}"'
+        url = f"https://www.bing.com/search?q={query}&count={num_results}&setLang=vi&mkt=vi-VN&cc=VN"
 
-        url = f"https://www.bing.com/search?q=\"{encoded_sentence}\"&count={num_results}&setLang=vi&mkt=vi-VN&cc=VN"
+        # Kiểm tra URL dài
         if len(url) > 2048:
-            return data, f"URL quá dài ({len(url)} ký tự)"
+            # Câu quá dài => chia đôi
+            parts = [sentence[:len(sentence)//2], sentence[len(sentence)//2:]]
+            print(f"Câu quá dài, chia thành 2 phần:\n{parts[0]}\n{parts[1]}")
+            all_data = []
+            for part in parts:
+                all_data.extend(search_sentence(part, num_results, proxy))
+            return all_data
 
+        # --- Lần tìm kiếm đầu tiên (có ngoặc kép) ---
         driver.get(url)
-        time.sleep(random.uniform(3, 6)) 
+        time.sleep(random.uniform(3, 6))
 
-  
         if "captcha" in driver.current_url.lower() or "sorry" in driver.page_source.lower():
-            return data, "Bị chặn CAPTCHA – thử lại với proxy khác"
+            data[0]["error"] = "Bị chặn CAPTCHA – thử lại với proxy khác"
+            return data
 
         soup = BeautifulSoup(driver.page_source, "lxml")
-
-  
         blocks = soup.select("li.b_algo, div.b_algo, div.b_card")[:num_results]
+
         for block in blocks:
             a = block.find("a", href=True)
-            h2 = block.find("h2")
-            snippet = block.find("p")
+            title_tag = block.find("h2")
+            snippet_tag = block.find("p")
 
-            link = a['href'] if a else "N/A"
-            title = h2.get_text(strip=True) if h2 else "N/A"
-            desc = snippet.get_text(strip=True) if snippet else "N/A"
+            link = a["href"] if a else ""
+            title = title_tag.get_text(strip=True) if title_tag else ""
+            snippet = snippet_tag.get_text(strip=True) if snippet_tag else ""
 
-
-            if not re.search(r'\.vn|bing\.com', link):
+            if not link or not title:
+                continue
+            if "sex" in link.lower() or "porn" in link.lower():
                 continue
 
             data[0]["results"].append({
                 "title": title,
                 "link": link,
-                "snippet": desc,
+                "snippet": snippet,
                 "has_plagiarism": False
             })
 
-        return data, "Thành công"
+        # Nếu không tìm thấy kết quả, thử lại không có ngoặc kép
+        if not data[0]["results"]:
+            print(f"Không tìm thấy kết quả cho câu (có ngoặc kép), thử lại không ngoặc kép:\n→ {sentence[:100]}...")
+            driver.quit()  # Đóng driver cũ
+            time.sleep(random.uniform(2, 4))
+
+            driver_retry = setup_driver(proxy)
+            if not driver_retry:
+                data[0]["error"] = "Không thể khởi tạo WebDriver khi tìm lại"
+                return data
+
+            query2 = urllib.parse.quote(sentence)
+            url2 = f"https://www.bing.com/search?q={query2}&count={num_results}&setLang=vi&mkt=vi-VN&cc=VN"
+            driver_retry.get(url2)
+            time.sleep(random.uniform(3, 6))
+
+            if "captcha" in driver_retry.current_url.lower() or "sorry" in driver_retry.page_source.lower():
+                data[0]["error"] = "Bị chặn CAPTCHA khi thử lại – thử proxy khác"
+                driver_retry.quit()
+                return data
+
+            soup2 = BeautifulSoup(driver_retry.page_source, "lxml")
+            blocks2 = soup2.select("li.b_algo, div.b_algo, div.b_card")[:num_results]
+
+            for block in blocks2:
+                a = block.find("a", href=True)
+                title_tag = block.find("h2")
+                snippet_tag = block.find("p")
+
+                link = a["href"] if a else ""
+                title = title_tag.get_text(strip=True) if title_tag else ""
+                snippet = snippet_tag.get_text(strip=True) if snippet_tag else ""
+
+                if not link or not title:
+                    continue
+                if "sex" in link.lower() or "porn" in link.lower():
+                    continue
+
+                data[0]["results"].append({
+                    "title": title,
+                    "link": link,
+                    "snippet": snippet,
+                    "has_plagiarism": False,
+                    "retry_without_quotes": True
+                })
+
+            driver_retry.quit()
+
+        # Nếu sau cả hai lần vẫn rỗng
+        if not data[0]["results"]:
+            data[0]["error"] = "Không tìm thấy kết quả dù đã thử lại không ngoặc kép"
+
+        return data
+
     except Exception as e:
-        return data, f"Lỗi xử lý: {e}"
+        data[0]["error"] = f"Lỗi xử lý: {e}"
+        return data
     finally:
         try:
             driver.quit()
@@ -141,41 +215,35 @@ def search_sentence(sentence, num_results=5, proxy=None):
             pass
 
 
+# =============================
+# Chạy toàn bộ pipeline
+# =============================
 def analyze_serp_structure(query, proxy=None):
     num_results = 5
     all_results = []
-    seen_links = set()
     sentences = split_sentences(query)
     if not sentences:
         print("Không có câu hợp lệ.")
         return [], ""
 
     for i, sentence in enumerate(sentences, 1):
-        print(f"\nCâu {i}: {sentence}")
-        results, status = search_sentence(sentence, num_results=num_results, proxy=proxy)
-        print(f"Trạng thái: {status}")
-
-        if results and len(results) > 0:
-            result_group = results[0]
-            for result in result_group["results"]:
-                if result["link"] not in seen_links:
-                    seen_links.add(result["link"])
-                    all_results.append({
-                        "sentence": sentence,
-                        "results": [result]
-                    })
-                    print(json.dumps({"sentence": sentence, "results": [result]}, ensure_ascii=False, indent=4))
-
-
+        print(f"\n🔹 Câu {i}/{len(sentences)}: {sentence}")
+        results = search_sentence(sentence, num_results=num_results, proxy=proxy)
+        for res in results:
+            all_results.append(res)
+            print(json.dumps(res, ensure_ascii=False, indent=4))
         time.sleep(random.uniform(3, 7))
 
     with open("result.json", "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=4)
-    print("\nĐã lưu kết quả vào result.json")
 
+    print("\nĐã lưu kết quả vào result.json")
     return all_results, ""
 
 
+# =============================
+# Chạy chính
+# =============================
 if __name__ == "__main__":
     try:
         if not os.path.exists("outputtest.txt"):
