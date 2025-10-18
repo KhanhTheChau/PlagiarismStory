@@ -1,0 +1,47 @@
+2025-10-18 22:22:31,780 [INFO] 🔍 Kiểm tra batch 1 (2 câu)
+2025-10-18 22:23:28,220 [INFO] 🔍 Kiểm tra batch 1 (2 câu)
+2025-10-18 22:24:30,614 [INFO] 🔍 Kiểm tra batch 1 (2 câu)
+2025-10-18 22:24:31,120 [INFO] 🔍 Batch bắt đầu | Model=gemini-2.0-flash | 2 câu
+2025-10-18 22:24:31,120 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-18 22:24:40,182 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-18 22:24:40,185 [INFO] 📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEA8CLOtMn52FM4-NTLlFBTV2KHHgLQpRyXxFlo74gMVP0EXNkf5ZAhtcGLyQAutQOfhgCv6OmhFYjxhSPgYQkCHzzad-iPYU0Fbc62AHIukrNOA32jBSOLtdRjJF5jNh0jIK1lzoi6igRGAJ6YZjYDyXUcgKc-7-JvRk4Rlb-o8sme", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4hdiVL4yYaMgPa7sTLtDKnDyW-q9xPWgFaQyqgSVfz5Zh_wQvja0RAvsEQb-L7nMIvppQYanNKrJeDrX0w0jp8oIEis_8JB-ueab6rTw7z9u6iZsVh2wl_XUA319p758E7UQco2qacp8kxJbWgpaSi6fMvvJabYdo4wTQkDqltHY9dhcz", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQZrnrTjCAti44rApEoA-f79r2HWh02CfLHPosWTH5EC5AfqUYkrG5zfGcCnGgJb3h0p-MMT_q2-0GUq06tcGqy2jD84tgOPQMttNqwnJeP1mn5fCF7wlFlx3lsGggT7O9Pb3bFlY1g7owrk3LUcXEXR1dQNA=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFABpi9Or9HyqToBUo56m-TbD8zAxKrwpziOppGSQ8HvKqwf3i3OCxWptNiTU6saGooqp0K03X2Tl77alkxds_vpe9Xr9sW_fh_pfpvp2j1RvJnbJV-V7VPy_sMGVS2P6quBCiHabAg3nFUomrU2nakZicl8yrVyh6nNVuTtoan", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqRpwt5tO91eAUxvba0OODoRo6BUKgHx1FXD0zVkzKzpZ7gMFZvtWfiluEa3zwsIvhuwm1fW-lQWEBCKft__70xE6OatxQ8QB_s0HNljAGw7SwV53YatdUzsOdKSsMwh9B_Y4EDrkZrx18qCA-T-rTW_xw-V0uCDq90gyjcaA="]
+},
+{
+"query": "Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEA8CLOtMn52FM4-NTLlFBTV2KHHgLQpRyXxFlo74gMVP0EXNkf5ZAhtcGLyQAutQOfhgCv6OmhFYjxhSPgYQkCHzzad-iPYU0Fbc62AHIukrNOA32jBSOLtdRjJF5jNh0jIK1lzoi6igRGAJ6YZjYDyXUcgKc-7-JvRk4Rlb-o8sme", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYjIwXSTsA8drlWLxNWGM2pdMSqwgSkwcifiMeCSj-qTBgKnmvg7kPZAb8p7phHp-GehD1WcW28EwJ5jBQFc9gXwWPjZ6NkHZQsu8srg9q_jw-vvCSX__zMSXw5oHFdn0xICnKUplceWfE", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWiMU-lK7xCI8qhgiBd8j4laFpUd6C0-b5Ckz1107GxQTMQPNOvK52wmTcID17jJzY0ZNxXtXEEU_hFsrWtLAu3DlYb1zpgFRXPOQQx7XvG7LmQR_gNw5qR5ZBZb6B5TfrNoKGXEmLAre6GkEfaIi7L9T5Qf8mFQ==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4hdiVL4yYaMgPa7sTLtDKnDyW-q9xPWgFaQyqgSVfz5Zh_wQvja0RAvsEQb-L7nMIvppQYanNKrJeDrX0w0jp8oIEis_8JB-ueab6rTw7z9u6iZsVh2wl_XUA319p758E7UQco2qacp8kxJbWgpaSi6fMvvJabYdo4wTQkDqltHY9dhcz", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4-kA32QsUrVnz0ai4287wK-Fqz1Cr4UVoK2DXOBkDgHv0wR7mLgafWj2jlwJBhQ2dy_MNKijqMlLgnGTPiHrAgupUBe8R95j_T1FM0ZgtrDC04nskunks85Rai02XIKwQysUEBjDqKfH__UhE4KgsNzNSZdVwpXSRIw=="]
+}
+]
+}
+```
+
+2025-10-18 22:25:49,233 [INFO] 🔍 Kiểm tra batch 1 (2 câu)
+2025-10-18 22:25:49,709 [INFO] 🔍 Batch bắt đầu | Model=gemini-2.0-flash | 2 câu
+2025-10-18 22:25:49,709 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-18 22:25:58,619 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-18 22:25:58,630 [INFO] 📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "\"Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.\"",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-sWNRPPxA321xnB7uwvtGlEmpI4bsNOEdOovKMuu6IZxvDmsLc4zDJ-rEzRxAVhWaJyUFEzyV_nPlqAaNzgvkDp_XhYvTfaZNnVO4KXYh8u8frPUutrD1quhoGMR6kxMGOvMFbAyffLdTXiB4G07WxlMpYObFpIvhzq22qnjkdlQL", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6ZVqb_Scs5Dx70stS6yv4OXjw7IDasDXRQrcHCYercFHrLCCnR8bRoUdP5X7_ZjhZshNmqAqYqG7CdIfS1mwaxXCQU6pFv9iLG6Z5JOTdU_sttzWXauVtE54vOOFPAsMQ3N7pr-Jq5NFc0PEtkTG0LQA-fzc=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKQnWKk2Q9z4FA-vfbHc3mqXaLJbAkhfffGUt7QlN9PFJUx28ykhHiOI2F-IyhRvULR6r1SCFCEj5pyfjzgQ4fY21W0hfATiixEPWVRo1NVXOAfn1AW5Q6GNcHdMJewrANf53NBaMbFEADmPh3nMYfMC_jzlqC98MUiz5r8-V2iEGe64YL", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHauv-oevfN1EKg7_MsUQfm3bvSNf8pCVscZL7SC9nsU3EjGj0cvmuup5u6nrzrEornOioTZ5vqqsTsgeOwSsTy-4qCO_R4W1Z-ziWLXJ4cBxObZHVgU5xdgoW1qvm-2lWyA3V2F2AhN9CRsWJXDnsy-D7mfNn5jHS5U5-jbWq", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXCA74NTNw0zY65Jh68HGKmlUVBOsQtReciMmTbTVaG3uBShut4L8damaV77ncVwLvncmKHEnyNu5YJnLg8HanbsMq6IaElv37aI8wVaBcbBHH1rX8NT6P2906_AUd6sv2RdpS6ZGDsgDWqKyJFUPcE7mQ5MMmHpZ5_-DcvIA="]
+},
+{
+"query": "\"Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.\"",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-sWNRPPxA321xnB7uwvtGlEmpI4bsNOEdOovKMuu6IZxvDmsLc4zDJ-rEzRxAVhWaJyUFEzyV_nPlqAaNzgvkDp_XhYvTfaZNnVO4KXYh8u8frPUutrD1quhoGMR6kxMGOvMFbAyffLdTXiB4G07WxlMpYObFpIvhzq22qnjkdlQL", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMu4jOsjOtxso9c1OAWrHHNvHZInIki8cZdywgsvKqS6lG3BY7HBfUoKMER88QiJDmmnS1m4Rlpu6cORRNfw14M43Clh5TPfO5PB_4E0hAxo5fqVeHDjsFK_p7_ic-WudQ5cr98VTuDREt", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETX-7u8GeVBn9yjrcZJE7dqy-MhE35CPCnJHas_H39Cpa9Z07WD6A6ga_CMHaHrIrvrrahmogSd3z_bHni1OGPVpVILDrHvEx-rlGqb0S9up2KQo44LXyPijOtcqQ2OCwkGORrqGiPvz1nrF4zpofSWAO5PBZzYg==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKQnWKk2Q9z4FA-vfbHc3mqXaLJbAkhfffGUt7QlN9PFJUx28ykhHiOI2F-IyhRvULR6r1SCFCEj5pyfjzgQ4fY21W0hfATiixEPWVRo1NVXOAfn1AW5Q6GNcHdMJewrANf53NBaMbFEADmPh3nMYfMC_jzlqC98MUiz5r8-V2iEGe64YL", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJzudcMknC4_CRwLiLysZVHNghhfilnWnm87vfCJfGzYTjs_FMXTM5gEh8WiAm3wuR93bcQPR9iEMTxzpDVVr83QqCpYEsyVIghG87tsMpoRWMN6234nwuHsn-xidvT6BQxvNQVtAVc_NNkqsFd_vmiIfuzoT5hJJzAw=="]
+}
+]
+}
+```
+
+2025-10-18 22:25:58,631 [INFO] ✅ raw: {'results': [{'query': '"Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc."', 'exists': True, 'links': ['https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-sWNRPPxA321xnB7uwvtGlEmpI4bsNOEdOovKMuu6IZxvDmsLc4zDJ-rEzRxAVhWaJyUFEzyV_nPlqAaNzgvkDp_XhYvTfaZNnVO4KXYh8u8frPUutrD1quhoGMR6kxMGOvMFbAyffLdTXiB4G07WxlMpYObFpIvhzq22qnjkdlQL', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6ZVqb_Scs5Dx70stS6yv4OXjw7IDasDXRQrcHCYercFHrLCCnR8bRoUdP5X7_ZjhZshNmqAqYqG7CdIfS1mwaxXCQU6pFv9iLG6Z5JOTdU_sttzWXauVtE54vOOFPAsMQ3N7pr-Jq5NFc0PEtkTG0LQA-fzc=', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKQnWKk2Q9z4FA-vfbHc3mqXaLJbAkhfffGUt7QlN9PFJUx28ykhHiOI2F-IyhRvULR6r1SCFCEj5pyfjzgQ4fY21W0hfATiixEPWVRo1NVXOAfn1AW5Q6GNcHdMJewrANf53NBaMbFEADmPh3nMYfMC_jzlqC98MUiz5r8-V2iEGe64YL', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHauv-oevfN1EKg7_MsUQfm3bvSNf8pCVscZL7SC9nsU3EjGj0cvmuup5u6nrzrEornOioTZ5vqqsTsgeOwSsTy-4qCO_R4W1Z-ziWLXJ4cBxObZHVgU5xdgoW1qvm-2lWyA3V2F2AhN9CRsWJXDnsy-D7mfNn5jHS5U5-jbWq', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXCA74NTNw0zY65Jh68HGKmlUVBOsQtReciMmTbTVaG3uBShut4L8damaV77ncVwLvncmKHEnyNu5YJnLg8HanbsMq6IaElv37aI8wVaBcbBHH1rX8NT6P2906_AUd6sv2RdpS6ZGDsgDWqKyJFUPcE7mQ5MMmHpZ5_-DcvIA=']}, {'query': '"Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm."', 'exists': True, 'links': ['https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-sWNRPPxA321xnB7uwvtGlEmpI4bsNOEdOovKMuu6IZxvDmsLc4zDJ-rEzRxAVhWaJyUFEzyV_nPlqAaNzgvkDp_XhYvTfaZNnVO4KXYh8u8frPUutrD1quhoGMR6kxMGOvMFbAyffLdTXiB4G07WxlMpYObFpIvhzq22qnjkdlQL', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMu4jOsjOtxso9c1OAWrHHNvHZInIki8cZdywgsvKqS6lG3BY7HBfUoKMER88QiJDmmnS1m4Rlpu6cORRNfw14M43Clh5TPfO5PB_4E0hAxo5fqVeHDjsFK_p7_ic-WudQ5cr98VTuDREt', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETX-7u8GeVBn9yjrcZJE7dqy-MhE35CPCnJHas_H39Cpa9Z07WD6A6ga_CMHaHrIrvrrahmogSd3z_bHni1OGPVpVILDrHvEx-rlGqb0S9up2KQo44LXyPijOtcqQ2OCwkGORrqGiPvz1nrF4zpofSWAO5PBZzYg==', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKQnWKk2Q9z4FA-vfbHc3mqXaLJbAkhfffGUt7QlN9PFJUx28ykhHiOI2F-IyhRvULR6r1SCFCEj5pyfjzgQ4fY21W0hfATiixEPWVRo1NVXOAfn1AW5Q6GNcHdMJewrANf53NBaMbFEADmPh3nMYfMC_jzlqC98MUiz5r8-V2iEGe64YL', 'https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJzudcMknC4_CRwLiLysZVHNghhfilnWnm87vfCJfGzYTjs_FMXTM5gEh8WiAm3wuR93bcQPR9iEMTxzpDVVr83QqCpYEsyVIghG87tsMpoRWMN6234nwuHsn-xidvT6BQxvNQVtAVc_NNkqsFd_vmiIfuzoT5hJJzAw==']}]}
