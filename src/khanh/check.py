@@ -8,7 +8,7 @@ import re
 
 # ==========================================
 API_KEYS = [
-   
+
 ]
 
 # ==========================================
@@ -127,7 +127,8 @@ def batch_check(all_sentences, batch_size=10):
             print("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
 
         time.sleep(random.uniform(3, 6))  # tránh giới hạn RPM
-
+    with open("check.json", "w", encoding="utf-8") as f:
+        json.dump({"results": results}, f, ensure_ascii=False, indent=2)
     return {"results": results}
 
 
