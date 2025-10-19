@@ -1,28 +1,6 @@
 {
   "results": [
     {
-      "query": "Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.",
-      "exists": true,
-      "links": [
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQr3cT1MjwUNN5osHpsxqm7-g6rgXA8LDYtQnVKFetkXubp0GQAk0ZYl2p8-mT679h1b0EMBsUbeISFDFPKpaPqamKzhw1bFZaclHKXkqHG5Ynib6MKSmU7IjaAg_0BKHmzKub8utjpCEOv-TXjEq71wstX2JzA0qVPmSDocl6Ud10",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6l1lmbdc9nVICMu6EyAAVFw26avkzknmqSeMXYFTZLDxmx0fEQsAEXoCWLyHrSCKOStt7qda2qK128u0e72ekoaWZm-V-tpjm0Rf2o87PbYXf6gzo2pQEZIR2GeK--javqxj9Jt96ws2DyuyyfKR3dqKSy4PPvWSXCmmbhNnBdhzr4Pmy",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOk6DOKDMx7tWlas9kkAoB9Ea4ddYaMBBGuMMJ0Z8D4RkzeYV41_iSbINtcg2AHkeYIfcQeoS-tjg4BlroOOd5tcNf6Bxucoqb8vmMZNgbCBLBcEpLuyfEKzxHbi7OCm0Tz4TF0AKhi8mvtKLnpV6i8bXydIk=",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7m-9dbJ6eroYDte_EHWk4VuQBvoetZQdcQL5Dmia25nwLcXuCGMBAYH0Chrx6fIUZ2sag2alUgemt_HwR9oqBbTjEhg_7SflDKzvTlx0hZ-BJRWPkMHaHHiDng8-E7dEGpyrrjmHKYNw5o95ZguJoRvHZaxFVEnTJhGHVdb8M",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-Dx2c2raCabhgmvMdWxHqWzV15mNjVe1ULtDofP3g6AkofwYAuHpIrc0rpSLheotX_tVKlrKpoNuOzkZ19psOudyFLDi2tXuU0RULoEmCWS8HXqwIL4ELUEMlXyugXh__t_bvqtEf8YNjAQ1yefGzuLylftUS-goGrEQXlAg="
-      ]
-    },
-    {
-      "query": "Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.",
-      "exists": true,
-      "links": [
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQr3cT1MjwUNN5osHpsxqm7-g6rgXA8LDYtQnVKFetkXubp0GQAk0ZYl2p8-mT679h1b0EMBsUbeISFDFPKpaPqamKzhw1bFZaclHKXkqHG5Ynib6MKSmU7IjaAg_0BKHmzKub8utjpCEOv-TXjEq71wstX2JzA0qVPmSDocl6Ud10",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPMkK1MxVQe2780peNAw4mXi3h1Zf0jnM-TSgJYr8VMb6rsTg0bpRdpNGlUNaFBi3jhDLjLHvuRNDBWp1uUURKN7QRvLgC6jTl2jj0_dnIq-rCeIoedoTe4A6gQtoXsFB-BVybIYd1KYCE",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe6ga44x4-T37TRAFJ63gXoeX5uo2R4Y6Uhvi5bGRWRTtnObOC749eQFWas9xkGg-VkD6OJXC6iX95dwsG2aryu1gjk07Oz_ICCPBsdz3LVyzp-Ml4m4NRPJyfsi6nDfERq4neYli1TE2JYfZgsUv_tmaLRXDUqw==",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6l1lmbdc9nVICMu6EyAAVFw26avkzknmqSeMXYFTZLDxmx0fEQsAEXoCWLyHrSCKOStt7qda2qK128u0e72ekoaWZm-V-tpjm0Rf2o87PbYXf6gzo2pQEZIR2GeK--javqxj9Jt96ws2DyuyyfKR3dqKSy4PPvWSXCmmbhNnBdhzr4Pmy",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc6RnnMr9STRGivbvwLZ_DvqUObkk5M27TgTZ8U3v9AphYUw5dc1byj-AwVBHK3kZpNWHzMP5hSH_o8GRTR5NqwlV37E4Yx2KCaWiu_A2hhHehBwXsP7T0mxOJZZdrD9ByfNsDWxwcvqdRHYj7f6Z0YGAbGR5chwvbSQ=="
-      ]
-    },
-    {
       "query": "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó.",
       "exists": false,
       "links": []
@@ -31,15 +9,15 @@
       "query": "Hạnh phúc không phải là đích đến mà là hành trình ta trải qua mỗi ngày.",
       "exists": true,
       "links": [
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3c2QbpAuTAi5dBLNjlyxEp0TNJMLMCjmiFM0cl_bLARIG7lz0PWUjUtBi3Lie5yq_Nz9cLkveA5nkKL8GcebrKyJ0i7oD1Cnfg0-c04qUXsn3jH4Csq9SUG9-9DoTOdS-gkDBsA==",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMw5FA2RdpiX93tHV00LegTVisc_LmePjCS1z_Q9WQ18lHLFHlFVJuAVYrOLPmAa-lc-DROyUfjV8BrgmcS5SsCP0xh6le8BXcN7Siimdrpv-rEFKstvpuyG6Df0On5gbmHhqdfrgwzEcHZKZXz6EmZw=="
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPEGaStMX1z3HWvcj0mhaQ7OUyG6Lsj2GsgfomUsnWz8d0ZL7RRFdzxwaEss42jzOBG6Xvq9MgKA0YuJKpg6BUBmW_g4pvmqOmwVFSiOR5eGNMTqSItubN3-GYNkh_7fyP_HdluY4=",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKmQvOHoKfgixacToRjkCa9DK6_eVdZ_hU75HsPx4yO3GM_KpTW9Q27yQCig-0tywgxJeIH_VHIafH29fuvautKYa8Db1gSVZTLfneQMrmFti7aqiT8_ifkSj7F8SXjK88wyaArKp_sOwtYW8AB1jVEI="
       ]
     },
     {
       "query": "Thành công không đo bằng tiền bạc mà bằng sự hài lòng trong tâm hồn.",
       "exists": true,
       "links": [
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQET8ncHKT5LvJaWkPEOqNfNksaQSN5tlknEwF1D4UGQCguIGY_q9nUUT3KpV73kf8e7czCPUnsyY272MmOuL5r9Gvqn3gIb8m1K27zWo5cnmEbG36Ga8SloGs0x8cnsQJ-SuEGdfzOO14-h_-c61gEK5o_41P-B07pqJdhVrdwfFe9IWTcLp6a769voQl7ZbrE="
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_cME1ebz0kcAZntlQNtr6Dvsx8_0JxWkMKrMTz0wH-5xEvlZUCP-a0sw37V7IFbRqTOzyLE2rIw-T3uozO-s-v1yem8SZMjN5gSVNOruRJ1VbMv6GxKzyjuLJBwjR4yVy5IBEJyV8ccGpl9gqGo-R_j4rwDcy6N1GRvc0O-StXIQua7kMXRz02K6j6_M-8w=="
       ]
     },
     {

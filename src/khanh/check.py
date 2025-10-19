@@ -5,10 +5,21 @@ import time
 import json
 import random
 import re
+import time
+import logging
+
+# ==========================================
+logging.basicConfig(
+    filename="check.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    encoding="utf-8"
+)
 
 # ==========================================
 API_KEYS = [
-
+    "AIzaSyASkCLE9cQdpT92Bh3ATNRbmVwMRfo5WVs",
+    "AIzaSyAk4N7S067L5jcmr3kEfeTReA89XtFSJ4c",
 ]
 
 # ==========================================
@@ -27,7 +38,6 @@ model_cycle = itertools.cycle(MODELS)
 
 
 def create_client():
-    """Tạo client mới với API key kế tiếp"""
     api_key = next(api_cycle)
     return genai.Client(api_key=api_key)
 
@@ -44,7 +54,7 @@ def safe_load_json(raw: str):
     # Tìm đoạn JSON đầu tiên trong text
     match = re.search(r"\{[\s\S]*\}", cleaned)
     if not match:
-        print("⚠️ Không tìm thấy JSON trong output.")
+        logging.info("⚠️ Không tìm thấy JSON trong output.")
         return None
 
     json_str = match.group(0)
@@ -52,10 +62,10 @@ def safe_load_json(raw: str):
     try:
         return json.loads(json_str)
     except json.JSONDecodeError as e:
-        print(f"⚠️ JSONDecodeError: {e}")
-        print("----- RAW (preview) -----")
-        print(raw[:400])
-        print("--------------------------")
+        logging.info(f"⚠️ JSONDecodeError: {e}")
+        logging.info("----- RAW (preview) -----")
+        logging.info(raw[:400])
+        logging.info("--------------------------")
         return None
 
 
@@ -63,7 +73,7 @@ def safe_load_json(raw: str):
 def check_sentences(sentences):
     client = create_client()
     model = next(model_cycle)
-
+    start_time = time.time()
     prompt = f"""
             Nhiệm vụ: Kiểm tra xem từng câu trong danh sách sau có tồn tại nguyên văn trên Google hay không.
 
@@ -100,10 +110,12 @@ def check_sentences(sentences):
             contents=prompt,
             config=config
         )
+        elapsed = time.time() - start_time
+        logging.info(f"[ℹ️ Thông tin] Model: {model}, Thời gian phản hồi: {elapsed:.2f}s")
         return response.text.strip()
 
     except Exception as e:
-        print(f"[⚠️ Lỗi] {type(e).__name__}: {e}")
+        logging.info(f"[⚠️ Lỗi] {type(e).__name__}: {e}")
         # Nếu lỗi quota hoặc rate limit, thử lại với model khác và key khác
         time.sleep(random.uniform(2, 5))
         return check_sentences(sentences)
@@ -115,16 +127,16 @@ def batch_check(all_sentences, batch_size=10):
 
     for i in range(0, len(all_sentences), batch_size):
         batch = all_sentences[i:i + batch_size]
-        print(f"\n🔍 Kiểm tra batch {i//batch_size + 1} ({len(batch)} câu)...")
+        logging.info(f"\n🔍 Kiểm tra batch {i//batch_size + 1} ({len(batch)} câu)...")
 
         raw = check_sentences(batch)
-        print(f"📄 Raw response:\n{raw}\n")
+        logging.info(f"📄 Raw response:\n{raw}\n")
 
         data = safe_load_json(raw)
         if data and "results" in data:
             results.extend(data["results"])
         else:
-            print("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
+            logging.info("⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.")
 
         time.sleep(random.uniform(3, 6))  # tránh giới hạn RPM
     with open("check.json", "w", encoding="utf-8") as f:
@@ -144,5 +156,5 @@ if __name__ == "__main__":
     ]
 
     final_result = batch_check(sentences, batch_size=2)
-    print("\n✅ Kết quả cuối cùng:")
-    print(json.dumps(final_result, ensure_ascii=False, indent=2))
+    logging.info("\n✅ Kết quả cuối cùng:")
+    logging.info(json.dumps(final_result, ensure_ascii=False, indent=2))
