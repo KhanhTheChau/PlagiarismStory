@@ -1,6 +1,28 @@
 {
   "results": [
     {
+      "query": "Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnUcqnbWfSGIMFmw1OpMc8Rk4YiMN11bU0zaCQ5OTGmM0Rf-pu62vbioTzIjz3_vtTwXz5kokx6sTQ1ozaouUc6p14a7ZCZ5KQf_AgecudF5e4ThMAFL1oopWB5HvX7xDbxjy0564BFlRGB261y5SoIESvDXMJZsABUCPVaTOG9kji",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhCoeYQiMXvSe0xMnucbtLGaGumS8iJArUa7Z9cEleUM-agGrZjekd_63__NCAixa83uUsLOfwU7pBVHHrAfkg67TNOEWvaCHg-NWyNrnefw4UjY8zoj-2B4bdqQQoRwLbHXRioNK7ik5i6RIiJVeprcLSit3MtYV4iNNPE8dm0NyqKIeX1QDaMqe5hkcM9uqyrZtjzhXx_VLmXvTgkNDI0WJfQz5cb9ZwUG6smwvvY1hRR-csPH_SsV5d4RQfGbx4cE3lKnjQ7BT0veufHDbgXZqpS-wFKDcioK8eLaSj63dBcIZlzv0URikjpHk4bFV7foPXXQPUlA==",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnTimG-7iCaETICXoCJOSAo5BPJjtoNe5tw2ImgWXnBsMXjBx9yj9ljFalWLI8KJ6zL_wu8RkQNeGKxkjPZJ7GeoONejzYhi2-D1XDDQxzi9fCct-zTEMCEQ8VjDq2PDc0AigK2MVIzIZo2MJdgmRW1MrKDp5ndn3R_fce8gO6l234R7gv",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKZAz5ne7NwQTOYwey-3TTay8g1JlGgoFtHQoF22_66PS9ppqCz6vNRiP37tTwTyN2U-480La2zIYSuaM_Uz5zracee9jMsLIcemcbVwRSOKuBiL8CMRnpOdusiQdaBFddMZNUp78_TFTSeL0yMnB4VCg4f_M=",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJWpd7mvyJX9mLxVDxBOGDdQQ-NjQzmR6-xzOmiCa8kCDe0-a87BarHfY0Y6aRy3p4zZ65dmuTXumeJLE8Y1UbJBG4eBwvnuWhOax5eifWfIgOLmpDEiR6GsXnG8s0GEJswa49lEb4IDT7UOyy7VCpb4rPfCEbjM-iOt02vTrT"
+      ]
+    },
+    {
+      "query": "Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnUcqnbWfSGIMFmw1OpMc8Rk4YiMN11bU0zaCQ5OTGmM0Rf-pu62vbioTzIjz3_vtTwXz5kokx6sTQ1ozaouUc6p14a7ZCZ5KQf_AgecudF5e4ThMAFL1oopWB5HvX7xDbxjy0564BFlRGB261y5SoIESvDXMJZsABUCPVaTOG9kji",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzrmxF6xgKs1PWJlw6NRiU-Z3H94P3AUKFypBAQf0wOspecm2QvDq9yjNhg7iOEb9p2lfTb3QIzhv72DuSS4OrBCo-CyBJZB-h-8kChJr1HBpE2K3arV-MIJNW9yY2sYX8Ff5opeabzzYD",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHARIFJQrtRdvQKp84lhxNIA8HT18SATkiZ23yCbjbZOj7wxVGWdpnt9K7LZa5YHzwNdB2t37WAMK9tWtnq1QooRJ6qv5sldGRJIgYdbCUNpmP4L-V4mioT24IZ6gIVS5iJAHlo0AMjYnTcd1A5XOQwa3KAqfA1hA==",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmc-Ga98IeVcSSXR4Uv4bzxZ7pZpdPSnKWzgXW9nCph0JiG1zEzSWO30RjjNMGw3MBlwZwe1SuFwe1I-nKTVFCn0YhDXXmrgHYNrSbFdLFS94UqBkVFTGXTwL7AJ_o3T3J7mnHYQ_Z4xR9tztlUX6Cz4DWaqSJ63u9oQ==",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ9uSi0iKEhLuWFDp7g0R4GLDQEovJ2SiHO4UJ7-zlCt79kXaSe4NaIgs151WV0W12oJELVc6oMJ8bQWjISTmL8fCj88aKnyu7r9HbIAsj4LLlyuUZ80STXA1B9P62loY5Ayin0IZL7NylCQPfbKapJ96k8Fr9o3D5hQETYLG9IDNf4O12KwbX3ID9DZzN1IXtvarh296_YrdFTCN8"
+      ]
+    },
+    {
       "query": "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó.",
       "exists": false,
       "links": []
