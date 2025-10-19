@@ -8,8 +8,7 @@ import re
 
 # ==========================================
 API_KEYS = [
-    "AIzaSyASkCLE9cQdpT92Bh3ATNRbmVwMRfo5WVs",
-    "AIzaSyAk4N7S067L5jcmr3kEfeTReA89XtFSJ4c",
+   
 ]
 
 # ==========================================
