@@ -200,3 +200,98 @@
     }
   ]
 }
+2025-10-19 19:37:42,321 [INFO] 
+🔍 Kiểm tra batch 1 (2 câu)...
+2025-10-19 19:37:42,780 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-19 19:37:55,956 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-19 19:37:55,959 [INFO] [ℹ️ Thông tin] Model: gemini-2.5-flash-lite, Thời gian phản hồi: 13.18s
+2025-10-19 19:37:55,960 [INFO] 📄 Raw response:
+{"results": [{"query": "\"Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.\"", "exists": true, "links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRgQYg-sC82L8zoJ6ZBFMXnItDDkNihn507t6m4lrLeNz6QgGfkn08q9iZXnHaOyVhSQX_AjV9udUaiv48fdWQ4eRQ037HtZy0Bx51ZEpemyv6KOQqc5rzJ6Q96Cisws8ZcKWy2A8Uyktir2kPNhk3dfK7mKW91qRgLzZqjZpeVMp", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbEr2U1gsh7HQr_4ExrFbjvFn6WfM48_gQ4qpYGJ9IsKiDb_uH9Wws_0LEZjgim7RztSIxighn6rDq49YbLFSmjyJtxROpgoaAmFvFqEebIkKh2XbVLbxW_JfTaB8JtcKiyiR-JDCqIBzcxzGRIEYy-2W5EYRKcnEwLcRsCSHQaIXj6Hw5", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYS9GIIq2E9IP7DaKOZvzF_8Y0TAgC2VrIUWGKW2jpIszRpGNRN_CoLzpdsfA1KrWeMQmhWupvfkXzdwi98ewOxnTxPvJbgNtUyjZGd7vUVVZ5cJ-WTRfn1121J6W4BWgUE4kBP3ZYXEijZdCEgOoP-tAM0bI=4", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7ceAmamHciKMkYcrYwerrgOHxj3YMfI5amNeyofV3BTbU4PCEILGtZFuoCwiUf2MqV97PW_9IVYoKODU5WC-00rFbYWrrJyIQmSJy_6zs2rdhSPCUYDlmCnDXraFdelD4sKUtABA4ANfbjNr4bVAWJwVkTApWOjcO6YilWC0=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDaJYCC3F-4R1ALGbn9dy87-3Rw4GjJhbIqxxtYezL8ew6L78V9k7CwicFQc_lDS-3uwu2dS_Dvt2vu3X_EiHAh9s8QfiunuSPoU5KjVKlNR2BEJ2oG5HmWS__r_dgltlRI_PoAd6mbA-dHqupB6Qm4ExAuDwhvmdqM0b44dTbGeH7QJahgLviSIr5cxwhkDz_MGdLs05Z"]}, {"query": "\"Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.\"", "exists": true, "links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRgQYg-sC82L8zoJ6ZBFMXnItDDkNihn507t6m4lrLeNz6QgGfkn08q9iZXnHaOyVhSQX_AjV9udUaiv48fdWQ4eRQ037HtZy0Bx51ZEpemyv6KOQqc5rzJ6Q96Cisws8ZcKWy2A8Uyktir2kPNhk3dfK7mKW91qRgLzZqjZpeVMp", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk8eifdF36XVVuwG513SLON0S_MleeHhqduXi888iFge8nNb_jHHOwgKMChvqMUKgMUgKF5xbYIvVjPPh1zRNIMJVQ1jlf6bEiAtzZ7gjvWxf6sblTisvGVVCg9EwBC1fYDVOQrkrdu_xI", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHr-c57Yq7rj-DGCsPp39lJd_1q_22l87yhHDDPqmWbU22MnWW-1nWa_cxpfqSe66sxDlg-lo5LFI7ZJ75o6QjC6pD2aJCESfQ2xRi5rvjO65nld2BPk3tePCCS97PxqVTInvKJg15rxVh61AzUoJN4VAiRzeKpWg==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKMBsOHk8LWSir4PU5BjCuWcSTJQVHev4zvOelIs0ZDc0m8jpSoXNhboaM8yhBVcQRH2p9rv0qU0BpZ1m-IqzL7o0PNbGwNPSuWsyDxoFTIA73vOy1LZNnALbI1yDLFQ6UJ0oZl4TuhMvzSHgqzlwrH6aFsqgVV8_60w==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7ceAmamHciKMkYcrYwerrgOHxj3YMfI5amNeyofV3BTbU4PCEILGtZFuoCwiUf2MqV97PW_9IVYoKODU5WC-00rFbYWrrJyIQmSJy_6zs2rdhSPCUYDlmCnDXraFdelD4sKUtABA4ANfbjNr4bVAWJwVkTApWOjcO6YilWC0="}]}
+}{"results": [{"query": "\"Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.\"", "exists": true, "links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRgQYg-sC82L8zoJ6ZBFMXnItDDkNihn507t6m4lrLeNz6QgGfkn08q9iZXnHaOyVhSQX_AjV9udUaiv48fdWQ4eRQ037HtZy0Bx51ZEpemyv6KOQqc5rzJ6Q96Cisws8ZcKWy2A8Uyktir2kPNhk3dfK7mKW91qRgLzZqjZpeVMp", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbEr2U1gsh7HQr_4ExrFbjvFn6WfM48_gQ4qpYGJ9IsKiDb_uH9Wws_0LEZjgim7RztSIxighn6rDq49YbLFSmjyJtxROpgoaAmFvFqEebIkKh2XbVLbxW_JfTaB8JtcKiyiR-JDCqIBzcxzGRIEYy-2W5EYRKcnEwLcRsCSHQaIXj6Hw5", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYS9GIIq2E9IP7DaKOZvzF_8Y0TAgC2VrIUWGKW2jpIszRpGNRN_CoLzpdsfA1KrWeMQmhWupvfkXzdwi98ewOxnTxPvJbgNtUyjZGd7vUVVZ5cJ-WTRfn1121J6W4BWgUE4kBP3ZYXEijZdCEgOoP-tAM0bI=4", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7ceAmamHciKMkYcrYwerrgOHxj3YMfI5amNeyofV3BTbU4PCEILGtZFuoCwiUf2MqV97PW_9IVYoKODU5WC-00rFbYWrrJyIQmSJy_6zs2rdhSPCUYDlmCnDXraFdelD4sKUtABA4ANfbjNr4bVAWJwVkTApWOjcO6YilWC0=", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDaJYCC3F-4R1ALGbn9dy87-3Rw4GjJhbIqxxtYezL8ew6L78V9k7CwicFQc_lDS-3uwu2dS_Dvt2vu3X_EiHAh9s8QfiunuSPoU5KjVKlNR2BEJ2oG5HmWS__r_dgltlRI_PoAd6mbA-dHqupB6Qm4ExAuDwhvmdqM0b44dTbGeH7QJahgLviSIr5cxwhkDz_MGdLs05Z"]}, {"query": "\"Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm.\"", "exists": true, "links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRgQYg-sC82L8zoJ6ZBFMXnItDDkNihn507t6m4lrLeNz6QgGfkn08q9iZXnHaOyVhSQX_AjV9udUaiv48fdWQ4eRQ037HtZy0Bx51ZEpemyv6KOQqc5rzJ6Q96Cisws8ZcKWy2A8Uyktir2kPNhk3dfK7mKW91qRgLzZqjZpeVMp", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk8eifdF36XVVuwG513SLON0S_MleeHhqduXi888iFge8nNb_jHHOwgKMChvqMUKgMUgKF5xbYIvVjPPh1zRNIMJVQ1jlf6bEiAtzZ7gjvWxf6sblTisvGVVCg9EwBC1fYDVOQrkrdu_xI", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHr-c57Yq7rj-DGCsPp39lJd_1q_22l87yhHDDPqmWbU22MnWW-1nWa_cxpfqSe66sxDlg-lo5LFI7ZJ75o6QjC6pD2aJCESfQ2xRi5rvjO65nld2BPk3tePCCS97PxqVTInvKJg15rxVh61AzUoJN4VAiRzeKpWg==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKMBsOHk8LWSir4PU5BjCuWcSTJQVHev4zvOelIs0ZDc0m8jpSoXNhboaM8yhBVcQRH2p9rv0qU0BpZ1m-IqzL7o0PNbGwNPSuWsyDxoFTIA73vOy1LZNnALbI1yDLFQ6UJ0oZl4TuhMvzSHgqzlwrH6aFsqgVV8_60w==", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7ceAmamHciKMkYcrYwerrgOHxj3YMfI5amNeyofV3BTbU4PCEILGtZFuoCwiUf2MqV97PW_9IVYoKODU5WC-00rFbYWrrJyIQmSJy_6zs2rdhSPCUYDlmCnDXraFdelD4sKUtABA4ANfbjNr4bVAWJwVkTApWOjcO6YilWC0="}]}
+}
+
+2025-10-19 19:37:55,965 [INFO] ⚠️ JSONDecodeError: Expecting ',' delimiter: line 1 column 2659 (char 2658)
+2025-10-19 19:37:55,965 [INFO] ----- RAW (preview) -----
+2025-10-19 19:37:55,965 [INFO] {"results": [{"query": "\"Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc.\"", "exists": true, "links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzRgQYg-sC82L8zoJ6ZBFMXnItDDkNihn507t6m4lrLeNz6QgGfkn08q9iZXnHaOyVhSQX_AjV9udUaiv48fdWQ4eRQ037HtZy0Bx51ZEpemyv6KOQqc5rzJ6Q96Cisws8ZcKWy2A8Uyktir2kPNhk3dfK7mKW91qRgLzZqjZpeVMp", "https://vertexaisearch.cloud.google.com/groun
+2025-10-19 19:37:55,965 [INFO] --------------------------
+2025-10-19 19:37:55,965 [INFO] ⚠️ JSON lỗi hoặc không hợp lệ, bỏ qua batch này.
+2025-10-19 19:37:59,695 [INFO] 
+🔍 Kiểm tra batch 2 (2 câu)...
+2025-10-19 19:38:00,062 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-19 19:38:09,367 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-19 19:38:09,369 [INFO] [ℹ️ Thông tin] Model: gemini-2.5-flash, Thời gian phản hồi: 9.31s
+2025-10-19 19:38:09,370 [INFO] 📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó.",
+"exists": false,
+"links": []
+},
+{
+"query": "Hạnh phúc không phải là đích đến mà là hành trình ta trải qua mỗi ngày.",
+"exists": true,
+"links": [
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsRmutUpabn6JzCDqO_oN6WdFQSvRQvguHh4lxuI1TYjpudzBwgbi0gjUHQ64QOy2u9J0uZ9Qk8IuJa6mWR7JzSnk0AW7aJwrbc44UczEBwXftinkS8kSY086Fqykx6wMQaIEpA==",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmssjULEK597Z90TIOc2pBW1BGiYzJj6EuNz187stNusJAPtPG9bVWmo9d27L-V4Wyd8X4UrhW4x30qZzaAYXIopOzgUVWr1oXamtADp-ju9SziaOTbBE4Vs6mcm6lM6BAQ1HAXsMufiRwhAT9hTbF1w=="
+]
+}
+]
+}
+```
+
+2025-10-19 19:38:12,393 [INFO] 
+🔍 Kiểm tra batch 3 (2 câu)...
+2025-10-19 19:38:12,742 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-19 19:38:18,584 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-19 19:38:18,585 [INFO] [ℹ️ Thông tin] Model: gemini-2.0-flash, Thời gian phản hồi: 5.84s
+2025-10-19 19:38:18,586 [INFO] 📄 Raw response:
+```json
+{
+"results": [
+{
+"query": "Thành công không đo bằng tiền bạc mà bằng sự hài lòng trong tâm hồn.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVMxHbYnmPGC2OUjHklrpcBuvRcXpWrixW3NKE_Jeb3koQEAJkGwR_nH-jvcXFXny15vih14jrv0_W7ymNMFzzcXfpu0KA4Ddds8M4LGATN6gjtmDLhQxnT-fWnqRzon_tk7Dcf6PnEy_DLr6GvEBOsMOe0jwLUU0RR6e2P1kOwttkMak_s6qlHelPnj88sg=="]
+},
+{
+"query": "Nếu tui là gia cát lượng thì tui đã không để cho ngươi làm việc này.",
+"exists": false,
+"links": []
+}
+]
+}
+```
+
+2025-10-19 19:38:24,199 [INFO] 
+✅ Kết quả cuối cùng:
+2025-10-19 19:38:24,199 [INFO] {
+  "results": [
+    {
+      "query": "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó.",
+      "exists": false,
+      "links": []
+    },
+    {
+      "query": "Hạnh phúc không phải là đích đến mà là hành trình ta trải qua mỗi ngày.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsRmutUpabn6JzCDqO_oN6WdFQSvRQvguHh4lxuI1TYjpudzBwgbi0gjUHQ64QOy2u9J0uZ9Qk8IuJa6mWR7JzSnk0AW7aJwrbc44UczEBwXftinkS8kSY086Fqykx6wMQaIEpA==",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmssjULEK597Z90TIOc2pBW1BGiYzJj6EuNz187stNusJAPtPG9bVWmo9d27L-V4Wyd8X4UrhW4x30qZzaAYXIopOzgUVWr1oXamtADp-ju9SziaOTbBE4Vs6mcm6lM6BAQ1HAXsMufiRwhAT9hTbF1w=="
+      ]
+    },
+    {
+      "query": "Thành công không đo bằng tiền bạc mà bằng sự hài lòng trong tâm hồn.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVMxHbYnmPGC2OUjHklrpcBuvRcXpWrixW3NKE_Jeb3koQEAJkGwR_nH-jvcXFXny15vih14jrv0_W7ymNMFzzcXfpu0KA4Ddds8M4LGATN6gjtmDLhQxnT-fWnqRzon_tk7Dcf6PnEy_DLr6GvEBOsMOe0jwLUU0RR6e2P1kOwttkMak_s6qlHelPnj88sg=="
+      ]
+    },
+    {
+      "query": "Nếu tui là gia cát lượng thì tui đã không để cho ngươi làm việc này.",
+      "exists": false,
+      "links": []
+    }
+  ]
+}

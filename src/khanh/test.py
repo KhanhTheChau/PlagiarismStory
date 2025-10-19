@@ -5,7 +5,7 @@ import json
 # ==========================================
 # 🔑 Cấu hình API key (bắt buộc)
 # ==========================================
-client = genai.Client(api_key="")
+client = genai.Client(api_key="AIzaSyAk4N7S067L5jcmr3kEfeTReA89XtFSJ4c")
 
 # ==========================================
 # 🧠 Prompt yêu cầu
@@ -41,15 +41,14 @@ Cấu trúc JSON mong muốn:
 
 Danh sách câu cần kiểm tra:
 1. "Ngay từ nhỏ, chúng ta đã có khái niệm về tiền bạc."
-2. "Đó là một cuộc chiến mà đồng tiền là súng đạn và mức sát thương thật là ghê gớm."
-3. "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó."
+2. "Cuộc sống là chuỗi ngày học hỏi và trải nghiệm, vì vậy hãy biết ơn nó."
 """
 
 # ==========================================
 # 🚀 Gọi mô hình với công cụ Google Search
 # ==========================================
 response = client.models.generate_content(
-    model="gemini-2.0-flash",
+    model="gemma-3-12b",
     contents=data,
     config=types.GenerateContentConfig(
         tools=[

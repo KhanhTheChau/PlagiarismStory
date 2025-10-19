@@ -24,12 +24,11 @@ API_KEYS = [
 
 # ==========================================
 MODELS = [
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",       
-    "gemini-robotics-er-1.5-preview",
-    "gemini-2.0-flash-lite",
-    "learnlm-2.0-flash-experimental",
+    "gemini-2.5-flash-lite",            #1.1k
+    "gemini-2.5-flash",                 #250
+    "gemini-2.0-flash",                 #200
+    "gemini-robotics-er-1.5-preview",   #250
+    "gemini-2.0-flash-lite",            #120    
 ]
 
 # ==========================================
