@@ -1,83 +1,185 @@
+/* ==============================
+   BODY & CONTAINER
+============================== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f6f7fb;
-    color: #222;
-    padding: 20px;
+    background: #fffaf5;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
-h1 {
-    margin-top: 0;
+.app-name {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+   
 }
 
-.paper {
-    white-space: pre-wrap;
-    background: #fcfcff;
-    border: 1px solid #e6e8ef;
-    padding: 16px;
-    margin-top: 12px;
-    border-radius: 6px;
-    line-height: 1.55;
-    font-family: "Times New Roman", Times, serif;
+#file-name {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
 }
 
-mark.plag {
-    background: #ffcccb;
-    padding: 0 2px;
-    border-radius: 2px;
+.file-input {
+    display: none;
 }
 
-table {
+/* ==============================
+   HEADER & NAV
+============================== */
+
+header {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
-table th,
-table td {
-    border: 1px solid #e3e6ef;
-    padding: 8px;
+.navbar {
+    width: 100%;
+    background-color: #f5a97f !important;
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffebcd !important;
+    text-decoration: underline;
+}
+
+.header-space {
+    height: 60px;
+}
+
+
+/* ==============================
+   CONTAINER CONTENT
+============================== */
+.container-content {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.content-section {
+    padding: 10px;
+}
+
+.title {
+    margin-bottom: 10px;
+    color: #f5a97f;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* FLASH MESSAGE */
+.flash {
+    margin-bottom: 20px;
+}
+
+.flash-msg {
+    background: #ffe6e6;
+    color: #d32f2f;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ffcccc;
     text-align: left;
 }
 
-.flash {
-    background: #ffe9d6;
-    padding: 8px;
-    border-radius: 4px;
-    margin-bottom: 8px;
+/* FORM */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
 }
 
-.note {
-    color: #666;
-    font-size: 0.9em;
-    margin-top: 8px;
+.input-area {
+    position: relative;
 }
 
-.controls {
-    margin: 8px 0;
+.text-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: vertical;
+    box-sizing: border-box;
 }
 
-.row {
-    margin: 8px 0;
-}
-
-button {
-    padding: 8px 14px;
-    border-radius: 6px;
-    border: none;
-    background: #2b6cb0;
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    width: 100%;
+    background-color: #eca57f !important;
     color: #fff;
-    cursor: pointer;
+    text-align: center;
+    padding: 18px 10px;
 }
 
-button:hover {
-    opacity: 0.95;
+footer b {
+    color: #fff;
+}
+
+.footer-links a {
+    color: #ffebcd;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
 }

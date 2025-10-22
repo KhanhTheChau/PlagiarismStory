@@ -1,72 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <title>Kết quả - Plagiarism Checker</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <div class="container">
-    <h1>Kết quả kiểm tra</h1>
-    <p>Đã kiểm tra <strong>{{ limit_lines }}</strong> dòng đầu (hoặc ít hơn nếu PDF ngắn hơn).</p>
-    <p>Tỉ lệ nghi đạo văn: <strong>{{ percent }}%</strong></p>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kết quả kiểm tra - Plagiarism Checker</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='result.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER (CỐ ĐỊNH) -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top"
+        style="background-color: #f5a97f"
+      >
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="{{ url_for('index') }}"
+        >
+          <img
+            src="{{ url_for('static', filename='logo.png') }}"
+            class="logo"
+          />
+          <span class="app-name">Plagiarism Checker</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('index') }}">Trang chủ</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Hướng dẫn</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <div class="controls">
-      <a href="{{ url_for('index') }}">← Quay lại</a>
+    <div class="header-space"></div>
+
+    <!-- KHU VỰC KẾT QUẢ -->
+    <div class="result-container">
+      <div class="left-panel">
+        <h2 class="panel-title">📄 Nội dung gốc</h2>
+        <div id="result-box" class="paper">{{ highlighted_text | safe }}</div>
+        <button id="toggle-btn" class="toggle-btn">Xem toàn bộ</button>
+      </div>
+
+      <div class="right-panel">
+        <div class="result-summary">
+          <h1>📊 Kết quả kiểm tra</h1>
+          <p>
+            Đã kiểm tra <strong>{{ limit_lines }}</strong> dòng đầu (hoặc ít hơn
+            nếu PDF ngắn hơn).
+          </p>
+          <p>
+            Tỉ lệ nghi đạo văn: <strong class="percent">{{ percent }}%</strong>
+          </p>
+          <div class="controls">
+            <a href="{{ url_for('index') }}" class="btn-back">← Quay lại</a>
+          </div>
+        </div>
+
+        <div class="result-details">
+          <h3>🔍 Chi tiết các dòng đã kiểm tra</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Dòng (tóm tắt)</th>
+                <th>Plagiarized</th>
+                <th>Nguồn</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for d in details %}
+              <tr>
+                <td>{{ loop.index }}</td>
+                <td style="max-width: 300px"><code>{{ d.line }}</code></td>
+                <td>{{ "Yes" if d.plagiarized else "No" }}</td>
+                <td>
+                  {% if d.sources %}
+                  <ul>
+                    {% for s in d.sources %}
+                    <li>
+                      <a href="{{ s }}" target="_blank" rel="noreferrer"
+                        >{{ s }}</a
+                      >
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  {% else %} - {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <div id="result-box" class="paper">
-      <!-- highlighted_text đã là HTML-safe và chứa <br> -->
-      {{ highlighted_text | safe }}
-    </div>
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <p>© 2025 Plagiarism Checker | <b>Test Giao diện</b></p>
+      <div class="footer-links">
+        <a href="#">Chính sách</a>
+        <a href="#">Điều khoản</a>
+        <a href="#">Hỗ trợ</a>
+      </div>
+    </footer>
 
-    <h3>Chi tiết các dòng đã kiểm tra</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Dòng (tóm tắt)</th>
-          <th>Plagiarized</th>
-          <th>Nguồn</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for d in details %}
-        <tr>
-          <td>{{ loop.index }}</td>
-          <td style="max-width:600px;"><code>{{ d.line }}</code></td>
-          <td>{{ "Yes" if d.plagiarized else "No" }}</td>
-          <td>
-            {% if d.sources %}
-              <ul>
-                {% for s in d.sources %}
-                  <li><a href="{{ s }}" target="_blank" rel="noreferrer">{{ s }}</a></li>
-                {% endfor %}
-              </ul>
-            {% else %}
-              -
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Tooltip khi click vào highlight
+        document.querySelectorAll("mark.plag").forEach((el) => {
+          const sources = el.getAttribute("data-sources") || "";
+          if (!sources) return;
+          el.title = sources;
+          el.style.cursor = "pointer";
+          el.addEventListener("click", () => {
+            alert("Nguồn:\n" + sources.replace(/\s*\|\s*/g, "\n"));
+          });
+        });
 
-  <script>
-    // Hiển thị tooltip của nguồn khi hover hoặc click vào đoạn bị đánh dấu
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('mark.plag').forEach(el => {
-        const sources = el.getAttribute('data-sources') || '';
-        if (!sources) return;
-        el.title = sources; // tooltip mặc định của trình duyệt
-        el.style.cursor = 'pointer';
-        el.addEventListener('click', () => {
-          alert("Nguồn:\n" + sources.replace(/\s*\|\s*/g, "\n"));
+        // Toggle xem toàn bộ / thu gọn
+        const toggleBtn = document.getElementById("toggle-btn");
+        const resultBox = document.getElementById("result-box");
+        toggleBtn.addEventListener("click", () => {
+          resultBox.classList.toggle("expanded");
+          toggleBtn.textContent = resultBox.classList.contains("expanded")
+            ? "Thu gọn"
+            : "Xem toàn bộ";
         });
       });
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>

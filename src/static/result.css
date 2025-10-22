@@ -1,0 +1,330 @@
+/* ==============================
+   BASE
+============================== */
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #fffaf5;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: #333;
+}
+
+/* ==============================
+   HEADER SPACE
+============================== */
+.header-space {
+    height: auto;
+    min-height: 56px;
+    width: 100%;
+}
+
+/* ==============================
+   RESULT CONTAINER
+============================== */
+.result-container {
+    display: flex;
+    background: #fffaf5;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+}
+
+.left-panel,
+.right-panel {
+    padding: 25px;
+    background: #ffffff;
+    overflow-y: auto;
+}
+
+.left-panel {
+    flex: 1 1 50%;
+    border-right: 2px solid #ffe6cc;
+    border-radius: 0 0 0 18px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.right-panel {
+    flex: 1 1 50%;
+    border-radius: 0 0 18px 0;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   PANEL & CONTENT
+============================== */
+.panel-title {
+    font-size: 20px;
+    color: #f5a97f;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f5a97f;
+    padding-bottom: 5px;
+}
+
+.paper {
+    background: #fff5f0;
+    border: 1px solid #f5c9a0;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+}
+
+.paper.expanded {
+    max-height: none;
+}
+
+.toggle-btn {
+    display: block;
+    margin: 10px auto 0 auto;
+    background: #f5a97f;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #f28c5a;
+}
+
+mark.plag {
+    background-color: #ffd6cc;
+    border-radius: 3px;
+    padding: 0 3px;
+}
+
+.result-summary h1 {
+    color: #f5a97f;
+    margin-bottom: 10px;
+}
+
+.percent {
+    font-size: 22px;
+    color: #d32f2f;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 12px;
+    background: #f5a97f;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.btn-back:hover {
+    background: #f28c5a;
+}
+
+/* ==============================
+   TABLE DETAILS
+============================== */
+.result-details {
+    margin-top: 25px;
+}
+
+.result-details table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.result-details th {
+    background: #fff2e6;
+    color: #f57c00;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #ffd6a5;
+}
+
+.result-details td {
+    padding: 8px;
+    border-bottom: 1px solid #ffe6cc;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.result-details td ul {
+    max-width: 250px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-height: 100px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.result-details td ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.result-details td ul::-webkit-scrollbar-thumb {
+    background-color: #f5c9a0;
+    border-radius: 4px;
+}
+
+.result-details ul {
+    margin: 4px 0;
+    padding-left: 18px;
+}
+
+.result-details a {
+    color: #f5a97f;
+    text-decoration: none;
+}
+
+.result-details a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+    background-color: #f5a97f;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    margin-right: 10px;
+}
+
+.navbar-brand .app-name {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffebcd !important;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ==============================
+   FOOTER
+============================== */
+.main-footer {
+    background: #f5a97f;
+    color: #fff;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main-footer b {
+    color: #fff;
+}
+
+.footer-links {
+    margin-top: 6px;
+}
+
+.footer-links a {
+    color: #ffebcd;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .result-container {
+        flex-direction: column;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1 1 100%;
+        border-radius: 10px;
+        border-right: none;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    .header-space {
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+}
