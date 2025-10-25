@@ -665,3 +665,152 @@ Batch 2 (1 câu)...
 2025-10-25 16:09:39,105 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "POST / HTTP/1.1" 200 -
 2025-10-25 16:09:39,128 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
 2025-10-25 16:09:39,129 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:20:41,005 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 16:20:41,006 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 16:20:41,008 [INFO]  * Restarting with stat
+2025-10-25 16:20:42,164 [WARNING]  * Debugger is active!
+2025-10-25 16:20:42,167 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:25,578 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:25,715 [INFO]  * Restarting with stat
+2025-10-25 16:21:26,942 [WARNING]  * Debugger is active!
+2025-10-25 16:21:26,946 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:29,347 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:29,494 [INFO]  * Restarting with stat
+2025-10-25 16:21:30,769 [WARNING]  * Debugger is active!
+2025-10-25 16:21:30,773 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:36,429 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:36,573 [INFO]  * Restarting with stat
+2025-10-25 16:21:37,768 [WARNING]  * Debugger is active!
+2025-10-25 16:21:37,772 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:39,069 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:39,210 [INFO]  * Restarting with stat
+2025-10-25 16:21:40,440 [WARNING]  * Debugger is active!
+2025-10-25 16:21:40,444 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:41,731 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:41,931 [INFO]  * Restarting with stat
+2025-10-25 16:21:43,270 [WARNING]  * Debugger is active!
+2025-10-25 16:21:43,273 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:44,533 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:44,721 [INFO]  * Restarting with stat
+2025-10-25 16:21:45,956 [WARNING]  * Debugger is active!
+2025-10-25 16:21:45,960 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:51,693 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:51,835 [INFO]  * Restarting with stat
+2025-10-25 16:21:53,036 [WARNING]  * Debugger is active!
+2025-10-25 16:21:53,039 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:21:55,425 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:21:55,618 [INFO]  * Restarting with stat
+2025-10-25 16:22:02,351 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 16:22:02,351 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 16:22:02,352 [INFO]  * Restarting with stat
+2025-10-25 16:22:03,635 [WARNING]  * Debugger is active!
+2025-10-25 16:22:03,639 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:22:04,968 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:04] "GET / HTTP/1.1" 200 -
+2025-10-25 16:22:05,007 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:22:05,223 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:22:12,279 [INFO] Dùng key: AIzaSy...5WVs, model: gemini-2.5-flash-lite
+2025-10-25 16:22:12,324 [ERROR] Lỗi key AIzaSy...5WVs: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:13,311 [INFO] Dùng key: AIzaSy...5WVs, model: gemini-2.5-flash
+2025-10-25 16:22:13,312 [ERROR] Lỗi key AIzaSy...5WVs: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:14,406 [INFO] Dùng key: AIzaSy...5WVs, model: gemini-2.0-flash
+2025-10-25 16:22:14,407 [ERROR] Lỗi key AIzaSy...5WVs: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:15,480 [INFO] Dùng key: AIzaSy...5WVs, model: gemini-robotics-er-1.5-preview
+2025-10-25 16:22:15,481 [ERROR] Lỗi key AIzaSy...5WVs: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:16,756 [INFO] Dùng key: AIzaSy...5WVs, model: gemini-2.0-flash-lite
+2025-10-25 16:22:16,756 [ERROR] Lỗi key AIzaSy...5WVs: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:17,910 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-2.5-flash-lite
+2025-10-25 16:22:17,910 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:19,005 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-2.5-flash
+2025-10-25 16:22:19,006 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:20,037 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-2.0-flash
+2025-10-25 16:22:20,037 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:20,423 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-robotics-er-1.5-preview
+2025-10-25 16:22:20,424 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:20,819 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-2.0-flash-lite
+2025-10-25 16:22:20,819 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:22:20,831 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:20] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-10-25 16:22:20,856 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:22:20,856 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-25 16:22:21,184 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:21] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=0hGw4nv01L0EGDLtpnp5 HTTP/1.1" 200 -
+2025-10-25 16:22:21,448 [INFO] 127.0.0.1 - - [25/Oct/2025 16:22:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-25 16:22:43,502 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:22:43,708 [INFO]  * Restarting with stat
+2025-10-25 16:22:45,059 [WARNING]  * Debugger is active!
+2025-10-25 16:22:45,063 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:23:14,045 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor1.py', reloading
+2025-10-25 16:23:14,211 [INFO]  * Restarting with stat
+2025-10-25 16:23:15,560 [WARNING]  * Debugger is active!
+2025-10-25 16:23:15,564 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:23:20,231 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 16:23:20,231 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 16:23:20,233 [INFO]  * Restarting with stat
+2025-10-25 16:23:21,410 [WARNING]  * Debugger is active!
+2025-10-25 16:23:21,413 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:23:26,409 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:26] "GET / HTTP/1.1" 200 -
+2025-10-25 16:23:26,448 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:23:26,663 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:23:33,842 [INFO] Dùng key: AIzaSy...SJ4c, model: gemini-2.0-flash-lite
+2025-10-25 16:23:33,889 [ERROR] Lỗi key AIzaSy...SJ4c: Models.generate_content() got an unexpected keyword argument 'generation_config'
+2025-10-25 16:23:33,937 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:33] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-10-25 16:23:33,966 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:33] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:23:33,969 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:33] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-25 16:23:34,301 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:34] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=DCuAL2UTI2576rSpFc22 HTTP/1.1" 200 -
+2025-10-25 16:23:34,569 [INFO] 127.0.0.1 - - [25/Oct/2025 16:23:34] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-25 16:24:31,335 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\app.py', reloading
+2025-10-25 16:24:31,523 [INFO]  * Restarting with stat
+2025-10-25 16:24:32,704 [WARNING]  * Debugger is active!
+2025-10-25 16:24:32,707 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:24:36,366 [INFO] 127.0.0.1 - - [25/Oct/2025 16:24:36] "GET / HTTP/1.1" 200 -
+2025-10-25 16:24:36,409 [INFO] 127.0.0.1 - - [25/Oct/2025 16:24:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:24:36,605 [INFO] 127.0.0.1 - - [25/Oct/2025 16:24:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:24:41,521 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 16:24:43,237 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:24:47,349 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:24:47,352 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 4.11s
+2025-10-25 16:24:47,354 [INFO] Raw response:
+```json
+{
+"results": [
+    {
+    "query": "CHA TÔI LÀ MỘT VỊ VUA VÀ LÀ HẬU DUỆ CỦA dòng dõi vua chúa.",
+    "exists": true,
+    "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlDupXMfnfDKDGwjczoNvJnGXLDcORHYiw33NargaJu9HGLRrxZoNvaYVCn1_Cq-Aql1I5hPgy1SOZIJJIc-PMrnzgBrDkxD_r4cKT4QqEw6rU-KkyoSHK20kFQEgup2RgL2j21KAfJkGuWvGT4YEQcsSz5xg20uRYsoK-kd_qfPNbV2-fHJ69sKqxFGE7t8Af3KxGMmxJ"
+    ]
+    },
+    {
+    "query": "Ông là một người đàn ông thấp bé, như phần lớn dân tộc chúng tôi, và vạm vỡ như một con bò tót, vai u thịt bắp.",
+    "exists": true,
+    "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlDupXMfnfDKDGwjczoNvJnGXLDcORHYiw33NargaJu9HGLRrxZoNvaYVCn1_Cq-Aql1I5hPgy1SOZIJJIc-PMrnzgBrDkxD_r4cKT4QqEw6rU-KkyoSHK20kFQEgup2RgL2j21KAfJkGuWvGT4YEQcsSz5xg20uRYsoK-kd_qfPNbV2-fHJ69sKqxFGE7t8Af3KxGMmxJ"
+    ]
+    }
+]
+}
+```
+
+2025-10-25 16:24:53,186 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 16:24:53,543 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:24:58,612 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:24:58,613 [INFO] Model: gemini-2.5-flash, Thời gian: 5.07s
+2025-10-25 16:24:58,614 [INFO] Raw response:
+```json
+{
+"results": [
+{
+"query": "Ông cưới mẹ tôi khi bà mười bốn tuổi và đã được nữ tư tế chứng giám rằng bà dễ hoài thai.",
+"exists": true,
+"links": ["https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXrH26_kWAWaInrrMzivO7M0v-kB9szhdobCaOb40tOdEz1ePNLjb7CR6vsqx2VCOKSn83jPF-oV-YboTfIPpltpjjraFn8pzOtul20TUmmGIhLVetlPEPqKPKZpaqjfWgRBUS0iwF_k27q8RAG7pSft9ctWyJdXjZef1NhvmPjfSYQhYJhov_MA0oaJmd75inzoY56kQX"]
+}
+]
+}
+```
+
+2025-10-25 16:25:04,201 [INFO] 127.0.0.1 - - [25/Oct/2025 16:25:04] "POST / HTTP/1.1" 200 -
+2025-10-25 16:25:04,246 [INFO] 127.0.0.1 - - [25/Oct/2025 16:25:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:25:04,249 [INFO] 127.0.0.1 - - [25/Oct/2025 16:25:04] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
