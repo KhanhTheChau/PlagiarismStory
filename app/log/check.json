@@ -1,24 +1,26 @@
 {
   "results": [
     {
-      "query": "BÀI VIẾT Lớn lên, bước vào con đường mưu sinh, chúng ta mong muốn kiếm được nhiều tiền vì khái niệm tiền bạc nhiều khi gắn liền với sự thành công trong cuộc sống.",
-      "exists": false,
-      "links": []
-    },
-    {
-      "query": "Kí tên Châu Thế Khanh.",
-      "exists": false,
-      "links": []
-    },
-    {
-      "query": "Vạn sựnhư ý.",
+      "query": "CHA TÔI LÀ MỘT VỊ VUA VÀ LÀ HẬU DUỆ CỦA dòng dõi vua chúa.",
       "exists": true,
       "links": [
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa0_laNYtJwAKjngCL8NR6AGRO0FsOpf1WhszHUprPP8ls2Gzb0pN8XYjX9GMCxlIY65wwaXRC-v4rY3GSk-ENF2X1MdK0T8-u1KpxzlcywUt8TZEt6-zzg5B_QZMRXIUd6rbJsYL6o2ZCXfRzWje_GEdhVjyA6tnWLp96R5HNcJEAJLiWu0T5",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtA_vUQ3_RY-_cgnbmn9fxVZLg9dlp_u3TjJts9OuT-A_TP1VybcGtl185AurTMsPQmeIYdQfqXZ1A2WHxt_cIK1Z0g5UDv3TgauPUBxlQ1IpifFCmXL7qB00hVlWFYNXs9231vSM=",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcPKTYGF4agcf6hEwXl1YRPMrgO9jY9SpmJyTxksFhaqlUdG6khM0GrvYo6t2CGwlkhawuMklnaofkKAxOOim1iqyRxGrEDDZFXhMBEVhbdazHZCQRLDQO0R6tVXP1mS6qErw_q8kY6ZsWAoxfCA==",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS_JfUx-OAu-HIBLrplunSN8Qn8fotcCVI8eezbUoSgs_9D831aVzEobzhcOk9ck-JyGa9x6dtKPe3VtaJb7v1Uw7YlFxGUG7AlOm6A5X-1I696T9tnsXDSSIUx9clAf2NmzpTrKcTpmmYOD_O5xKuX4MODTR2DuGKLEAiPeTvxm_vLku5LC-kZMcFAGXyNNjG3MiSft8oWiiQoWJFNVLyUCR_2iVFD3UZYTo4_tRy3owYU9IFLYvR9XOHYrmGQo5a2SwNmGo3i1kYY062hW4pAGixxXu9caKzJLmWyuXQAqZKzLeif-KB",
-        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAExJeT7kjZWil9acaK_rTjew1RQPjC0Yeivqxaiw35feJZd6TDE3AP1NQvF7514AnBdNnHXOqoVSf8n2S4B7FIl4CAaej6PcEPuYEeSXva7hHK8j5KLQv-fS7Bx86MwBVfREgJRlXjD9nG5_sYhrAgHtqZmRoR0ILPJCKsWskBUwdwttFsWBA7fP-Kw=="
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQzI9XR2171B-zIws1dBp6GCc_3IH-0qnL11HTyEoSfTu6JYBE3X7QkW3hXf9aQNyOWDqds4GtbbGbpWLACGSTOZ-og-kmbX6SQJepGJvXjpnq7z-JTLUn5e-rv0Kl2H7OYtytNbotOWw5UQcOKDwzYQs8GoG4UAMEOI7ctert9XCLliRxvBhgJSyi-ArpDdOCkU3fpPpG",
+        "https://sachtruyen.cloud/truong-ca-achilles/"
+      ]
+    },
+    {
+      "query": "Ông là một người đàn ông thấp bé, như phần lớn dân tộc chúng tôi, và vạm vỡ như một con bò tót, vai u thịt bắp.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQzI9XR2171B-zIws1dBp6GCc_3IH-0qnL11HTyEoSfTu6JYBE3X7QkW3hXf9aQNyOWDqds4GtbbGbpWLACGSTOZ-og-kmbX6SQJepGJvXjpnq7z-JTLUn5e-rv0Kl2H7OYtytNbotOWw5UQcOKDwzYQs8GoG4UAMEOI7ctert9XCLliRxvBhgJSyi-ArpDdOCkU3fpPpG",
+        "https://sachtruyen.cloud/truong-ca-achilles/"
+      ]
+    },
+    {
+      "query": "Ông cưới mẹ tôi khi bà mười bốn tuổi và đã được nữ tư tế chứng giám rằng bà dễ hoài thai.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbNfQafP_wEvaDJ7flviygsiPl5kKS6CIDtB9dLK8Ee9zWLz8dNaacc16IuM3M0ggSxEoU2Cr1wSKWY-6q7kwCJhMjMKg2Fbyzxq0U9mZNg68mt9ynh1wyCPcquAAacqi7yhAnAOFqQ_SaRh9shA3SmEXqhDtjXNHaW3ZiaQ1lUZHA5J_p6wfCqo7o6csh1yyAqHDTao1j"
       ]
     }
   ]

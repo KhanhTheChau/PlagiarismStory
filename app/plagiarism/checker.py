@@ -54,7 +54,8 @@ class GeminiPlagiarismChecker:
                 Yêu cầu:
                 1. Tìm kiếm chính xác trên Google và trả về tối đa 5 url.
                 2. Trả JSON duy nhất, không kèm văn bản hay markdown.
-                3. Cấu trúc JSON:
+                3. Nếu câu đó bị dính từ thì sửa lại câu cho đúng ngữ pháp trước khi tìm kiếm (không thay đổi nội dung).
+                4. Cấu trúc JSON:
                 {{
                 "results": [
                     {{

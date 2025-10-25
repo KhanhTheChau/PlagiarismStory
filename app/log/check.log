@@ -270,3 +270,398 @@ Batch 2 (1 câu)...
 2025-10-25 15:42:02,600 [INFO] 127.0.0.1 - - [25/Oct/2025 15:42:02] "POST / HTTP/1.1" 200 -
 2025-10-25 15:42:02,624 [INFO] 127.0.0.1 - - [25/Oct/2025 15:42:02] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
 2025-10-25 15:42:02,624 [INFO] 127.0.0.1 - - [25/Oct/2025 15:42:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:50:27,890 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 15:50:27,890 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 15:50:27,891 [INFO]  * Restarting with stat
+2025-10-25 15:50:29,195 [WARNING]  * Debugger is active!
+2025-10-25 15:50:29,198 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 15:50:31,404 [INFO] 127.0.0.1 - - [25/Oct/2025 15:50:31] "GET / HTTP/1.1" 200 -
+2025-10-25 15:50:31,445 [INFO] 127.0.0.1 - - [25/Oct/2025 15:50:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 15:50:31,658 [INFO] 127.0.0.1 - - [25/Oct/2025 15:50:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:50:37,301 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 15:50:38,766 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:50:53,670 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:50:53,672 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 14.91s
+2025-10-25 15:50:53,673 [INFO] Raw response:
+```json
+{
+  "results": [
+1. {
+"query": "BÀI VIẾT Lớn lên, bước vào con đường mưu sinh, chúng ta mong muốn kiếm được nhiều tiền vì khái niệm tiền bạc nhiều khi gắn liền với sựthành công trong cuộc sống.",
+"exists": false,
+"links": []
+},
+2. {
+"query": "Kí tên Châu Thế Khanh.",
+"exists": true,
+"links": [
+"https://dantri.com.vn/xa-hoi/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-20150902100806597.htm",
+"https://tinnhanh247.vn/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-n166471.html",
+"https://baotintuc.vn/xa-hoi/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-20150902100550203.htm",
+"https://vietnamnet.vn/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-post307047.html",
+"https://thanhnien.vn/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-post413498.html"
+]
+}
+]
+}
+```
+
+2025-10-25 15:50:53,674 [INFO] JSONDecodeError: Expecting ',' delimiter: line 3 column 2 (char 18)
+2025-10-25 15:50:53,674 [INFO] ----- RAW preview -----
+2025-10-25 15:50:53,674 [INFO] ```json
+{
+  "results": [
+1. {
+"query": "BÀI VIẾT Lớn lên, bước vào con đường mưu sinh, chúng ta mong muốn kiếm được nhiều tiền vì khái niệm tiền bạc nhiều khi gắn liền với sựthành công trong cuộc sống.",
+"exists": false,
+"links": []
+},
+2. {
+"query": "Kí tên Châu Thế Khanh.",
+"exists": true,
+"links": [
+"https://dantri.com.vn/xa-hoi/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-20150902100806597.htm",
+"https://tinnhanh247.vn/ong-thanh-hoa-phan-tran-ve-chuyen-ky-ten-chau-the-khanh-n166471
+2025-10-25 15:50:53,674 [INFO] -----------------------
+2025-10-25 15:50:53,674 [ERROR] JSON lỗi hoặc không hợp lệ. Gắn dữ liệu mặc định False.
+2025-10-25 15:50:57,586 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 15:50:57,944 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:51:06,062 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:51:06,063 [INFO] Model: gemini-2.5-flash, Thời gian: 8.12s
+2025-10-25 15:51:06,064 [INFO] Raw response:
+```json
+{
+"results": [
+{
+"query": "Vạn sựnhư ý.",
+"exists": true,
+"links": [
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgFJNDHM-Ibo0bGCeuL4b-Aelx59XVyklH5Wn8MgmA_iytpZhXlc7GA6ThyYTh58F5-2Ul50BmhdY4t7g2nbhB8LGTtdO9jdjX0uQ-tKZY2F6kqK4ev43iIdbs5TvCJCMwqxrnwCXanxA3A-GEjShMgleiXJG3K1i387XOOBlVaoVzDnv2oNja",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1YhJemH-E463GKyP-PV4Ef9SSCCNYY0DXG0g9LqPWbUBABEpPqw9QWpT06dFF1mXjTxlnMgDDDiVCssUb-KuoMdWqCg2N5ryRDGssrh_Lenl2WGIbtai7uq_TlKrYk6yzVmA8mYM=",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlfwixKoHkwHoMY9CAXnMN48zRLsaEobUHp9ZJVZmdcixJyQykh4X0DdO5G1j_WMB0AENOU2s0EUjC0Xh4E68Xp4n-vYtu6V46DH9BALdWn967lu9iBZ_5ucov1i2HuOApp06GbSOkAD9SQD21zg==",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNYPrkYFPY3X2MnpxU4fvyt4T2ZsCxF-ep3-I_Bu5XNWx5r8eifVpmafD4gHLRhmAZi7tGyCXXyoSCS4oB7i0-BDb0Y5M5UpCCyzDS4rluBTDmE_j8fNnBlQMmBWhbZH8RAHU8qImuD9WIkDtTYhSw5hqytNpeHeHQhoakk9Qy7ClwJM-5CfBdUjx8W-nMzyfGw6QCOfPgKp5_r8U9iWT1B-4tXru_KlAXIk1TmZohpKzOO1lNsLLnCsG0ZZG4ozw9foZ2TmDy1DPVLGOxhbvWE6mZCxM0rfU7ASGrPMKBb7cG709ynuTy",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9AQXMmlo5wLlljQr-fVavMp1oPQ6wgoIMvAeoKAZns3TsKVjGCicrqsf68GH_B-tETxUOw6DEZ7_W9w6VyjkdDsRTWVT-6mcLfQK7xnncZGbDHqz_ykSLBG7ALYmXAnn3gYKLZEsqXaVWTMTTVtALXPJFPqsk4zO5MIfPdAcQ25ak5jr7-COushfEQQ="
+]
+}
+]
+}
+```
+
+2025-10-25 15:51:11,726 [INFO] 127.0.0.1 - - [25/Oct/2025 15:51:11] "POST / HTTP/1.1" 200 -
+2025-10-25 15:51:11,743 [INFO] 127.0.0.1 - - [25/Oct/2025 15:51:11] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
+2025-10-25 15:51:11,744 [INFO] 127.0.0.1 - - [25/Oct/2025 15:51:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:56:37,494 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 15:56:37,495 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 15:56:37,497 [INFO]  * Restarting with stat
+2025-10-25 15:56:38,839 [WARNING]  * Debugger is active!
+2025-10-25 15:56:38,845 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 15:56:44,852 [INFO] 127.0.0.1 - - [25/Oct/2025 15:56:44] "GET / HTTP/1.1" 200 -
+2025-10-25 15:56:44,893 [INFO] 127.0.0.1 - - [25/Oct/2025 15:56:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 15:56:45,092 [INFO] 127.0.0.1 - - [25/Oct/2025 15:56:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:56:53,101 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 15:56:54,421 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:56:57,411 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:56:57,416 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 3.00s
+2025-10-25 15:56:57,419 [INFO] Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "BÀ I V IẾ T Lớn l ên, b ư ớc v ào con đ ư ờng m ưu sinh, ch úng ta mong mu ốn ki ếm đ ư ợc nhi ều ti ền v ì kh ái ni ệm ti ền b ạc nhi ều khi g ắn li ền v ới s ựth ành c ông trong cu ộc s ống.",
+      "exists": false,
+      "links": []
+    },
+    {
+      "query": "Kí t ên Ch âu Th ế Khanh.",
+      "exists": false,
+      "links": []
+    }
+  ]
+}
+```
+
+2025-10-25 15:57:00,833 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 15:57:01,933 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:57:10,473 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:57:10,475 [INFO] Model: gemini-2.5-flash, Thời gian: 8.54s
+2025-10-25 15:57:10,476 [INFO] Raw response:
+```json
+{
+"results": [
+{
+"query": "Vạn s ựnh ư ý.",
+"exists": false,
+"links": []
+}
+]
+}
+```
+
+2025-10-25 15:57:13,627 [INFO] 127.0.0.1 - - [25/Oct/2025 15:57:13] "POST / HTTP/1.1" 200 -
+2025-10-25 15:57:13,642 [INFO] 127.0.0.1 - - [25/Oct/2025 15:57:13] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
+2025-10-25 15:57:13,644 [INFO] 127.0.0.1 - - [25/Oct/2025 15:57:13] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:59:19,118 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor.py', reloading
+2025-10-25 15:59:19,345 [INFO]  * Restarting with stat
+2025-10-25 15:59:20,601 [WARNING]  * Debugger is active!
+2025-10-25 15:59:20,605 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 15:59:30,174 [INFO] 127.0.0.1 - - [25/Oct/2025 15:59:30] "GET / HTTP/1.1" 200 -
+2025-10-25 15:59:30,217 [INFO] 127.0.0.1 - - [25/Oct/2025 15:59:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 15:59:30,412 [INFO] 127.0.0.1 - - [25/Oct/2025 15:59:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 15:59:34,844 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 15:59:36,337 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:59:38,116 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:59:38,120 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 1.78s
+2025-10-25 15:59:38,120 [INFO] [Lỗi] AttributeError: 'NoneType' object has no attribute 'strip'
+2025-10-25 15:59:44,223 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 15:59:59,331 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 15:59:59,335 [INFO] Model: gemini-2.5-flash, Thời gian: 15.11s
+2025-10-25 15:59:59,341 [INFO] Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "BÀI VIẾT Lớn lên, bước vào con đường mưu sinh, chúng ta mong muốn kiếm được nhiều tiền vì khái niệm tiền bạc nhiều khi gắn liền với sựthành công trong cuộc sống.",
+      "exists": false,
+      "links": []
+    },
+    {
+      "query": "Kí tên Châu ThếKhanh.",
+      "exists": false,
+      "links": []
+    }
+  ]
+}
+```
+
+2025-10-25 16:00:04,952 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 16:00:05,325 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:00:11,616 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:00:11,617 [INFO] Model: gemini-2.0-flash, Thời gian: 6.29s
+2025-10-25 16:00:11,619 [INFO] Raw response:
+```json
+{
+"results": [
+{
+"query": "Vạn sựnhư ý.",
+"exists": true,
+"links": [
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzUfXMVFa2OroJllNClTcseYElp-n_ysriQJ0IjJR1qptpPPKKW5P8XBDEndbkggaYu-mKlcINY9WKQYctD2tckOOBwj4pnXJTbpAaq_w_zW8XBwYRhguyQaaDDcJ6HyHrmAeM8n5iJjgCYVgEox0H1xBoQFG7SLjfIH0JyEUnlGbk2coQopEW",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfT3ZoMgM7RAhxfHlzQ3AKwaCkl5TiPjOKoOxP2Rx3CxYJ5cpleVBi2PX9Nv9myvLyQD49VZBTdUV47YirkEC95ZwGu7oal3sDGwvXJGI6olvkvl8sXYbOHwyltHkZjrmspQ2XLgM=",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLCGcNXljDTGmqS-BdaqVuFULTA0BRUlml5jdKkZxtgPNDuDI6RfnI3ZP9zGpXpZximRis-0XOjgUY1TM5OxCs3bUjC8Jnoha-qLKqI1aWp7MuhXRTls_Nm0K4rHAg1uBjh07HSHSK2B6zh-77PQ==",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAXKKFQwu-F8_DV2bZU6kbK_9FaPLj2MgEpeFtsVgi9OIFHxb_I1GeMVMoPw-kuE1dVfA9v5-_nGzjIRVwUVSRAh6rSxcY8iM80OwyyCW5lLxfp9dqJBE16ZTRdmZ8gF9QNFnCebmuUWUoJIpz8hNzsbyJJABYUGwBtbMHX1eRmf45LAzjEMgquDJT2Q87QDRnhHWU4y2YCmcJ77vk4w2vIw8UkIsKfyffpVW5RLqDF3Zwvx88uUN1nhd9XTGDd7b7tjvP49rBk898jUj-PJ74rPygg1pQyadDTYlYBduVKngctR9JT1Z4",
+"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCo11TgX8awzScfYDvQJhIZ3JMbC1FbJB-Eh7b4zHRpBf3Z12R7F1oQGQQkyErhGLL8fzRDCpagfNfsZxuPeIC8uCyIZcKX0cupIIFp4dfWg-r4TFdvF9txRvf_9mMWclF9sIKYRvU5ZoKj4A9BcBUlFAl_sUPk__yWSAx4CNGwnr9O4CrGuJGTxKwhw=="
+]
+}
+]
+}
+```
+
+2025-10-25 16:00:15,285 [INFO] 127.0.0.1 - - [25/Oct/2025 16:00:15] "POST / HTTP/1.1" 200 -
+2025-10-25 16:00:15,311 [INFO] 127.0.0.1 - - [25/Oct/2025 16:00:15] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:00:15,311 [INFO] 127.0.0.1 - - [25/Oct/2025 16:00:15] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
+2025-10-25 16:00:45,338 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\extractor.py', reloading
+2025-10-25 16:00:45,511 [INFO]  * Restarting with stat
+2025-10-25 16:00:46,705 [WARNING]  * Debugger is active!
+2025-10-25 16:00:46,708 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:00:59,035 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 16:00:59,037 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-25 16:00:59,037 [INFO]  * Restarting with stat
+2025-10-25 16:01:00,190 [WARNING]  * Debugger is active!
+2025-10-25 16:01:00,192 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:02:52,455 [INFO] 127.0.0.1 - - [25/Oct/2025 16:02:52] "GET / HTTP/1.1" 200 -
+2025-10-25 16:02:52,664 [INFO] 127.0.0.1 - - [25/Oct/2025 16:02:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:02:52,685 [INFO] 127.0.0.1 - - [25/Oct/2025 16:02:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:02:57,580 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 16:02:58,900 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:03:02,008 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:03:02,013 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 3.11s
+2025-10-25 16:03:02,015 [INFO] Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "\"CHA TÔI LÀ MỘT VỊVUA VÀ LÀ HẬU DUỆCỦA dòng dõi vua chúa.\"",
+      "exists": false,
+      "links": []
+    },
+    {
+      "query": "\"Ông là một người đàn ông thấp bé, như phần lớn dân tộc chúng tôi, và vạm vỡnhư một con bò tót, vai u thịt bắp.\"",
+      "exists": false,
+      "links": []
+    }
+  ]
+}
+```
+
+2025-10-25 16:03:05,190 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 16:03:06,141 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:03:11,447 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:03:11,449 [INFO] Model: gemini-2.5-flash, Thời gian: 5.31s
+2025-10-25 16:03:11,452 [INFO] Raw response:
+```json
+{
+"results": [
+{
+"query": "Ông cưới mẹtôi khi bà mười bốn tuổi và đã được nữtư tếchứng giám rằng bà dễhoài thai.",
+"exists": true,
+"links": [
+"https://www.wattpad.com/1297316744-con-g%C3%A1i-c%E1%BB%A7a-qu%E1%BB%B7-sa-t%C3%A2ng-chap-1-cu%E1%BB%99c-h%C3%B4n-nh%C3%A2n-d%E1%BB%8B-bi%E1%BB%87t",
+"https://truyenwki.com/con-gai-cua-quy-sa-tang/chuong-1-cuoc-hon-nhan-di-biet/",
+"https://truyendich.vn/con-gai-cua-quy-sa-tang-chuong-1/",
+"https://haitac.fun/con-gai-cua-quy-sa-tang-chuong-1/",
+"https://cotruyen.vn/doc-truyen/con-gai-cua-quy-sa-tang/chuong-1"
+]
+}
+]
+}
+```
+
+2025-10-25 16:03:16,823 [INFO] 127.0.0.1 - - [25/Oct/2025 16:03:16] "POST / HTTP/1.1" 200 -
+2025-10-25 16:03:16,837 [INFO] 127.0.0.1 - - [25/Oct/2025 16:03:16] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
+2025-10-25 16:03:17,139 [INFO] 127.0.0.1 - - [25/Oct/2025 16:03:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:06:31,462 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:31,641 [INFO]  * Restarting with stat
+2025-10-25 16:06:33,041 [WARNING]  * Debugger is active!
+2025-10-25 16:06:33,043 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:33,258 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:33,446 [INFO]  * Restarting with stat
+2025-10-25 16:06:34,746 [WARNING]  * Debugger is active!
+2025-10-25 16:06:34,749 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:36,005 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:36,161 [INFO]  * Restarting with stat
+2025-10-25 16:06:37,694 [WARNING]  * Debugger is active!
+2025-10-25 16:06:37,698 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:38,991 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:39,159 [INFO]  * Restarting with stat
+2025-10-25 16:06:40,405 [WARNING]  * Debugger is active!
+2025-10-25 16:06:40,407 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:40,585 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:40,787 [INFO]  * Restarting with stat
+2025-10-25 16:06:42,172 [WARNING]  * Debugger is active!
+2025-10-25 16:06:42,174 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:43,425 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:43,616 [INFO]  * Restarting with stat
+2025-10-25 16:06:44,798 [WARNING]  * Debugger is active!
+2025-10-25 16:06:44,801 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:45,005 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:45,136 [INFO]  * Restarting with stat
+2025-10-25 16:06:46,475 [WARNING]  * Debugger is active!
+2025-10-25 16:06:46,477 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:48,834 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:49,004 [INFO]  * Restarting with stat
+2025-10-25 16:06:50,396 [WARNING]  * Debugger is active!
+2025-10-25 16:06:50,401 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:51,687 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:51,856 [INFO]  * Restarting with stat
+2025-10-25 16:06:53,010 [WARNING]  * Debugger is active!
+2025-10-25 16:06:53,013 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:55,405 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:55,560 [INFO]  * Restarting with stat
+2025-10-25 16:06:56,818 [WARNING]  * Debugger is active!
+2025-10-25 16:06:56,821 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:58,069 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:06:58,260 [INFO]  * Restarting with stat
+2025-10-25 16:06:59,715 [WARNING]  * Debugger is active!
+2025-10-25 16:06:59,718 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:06:59,889 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:00,096 [INFO]  * Restarting with stat
+2025-10-25 16:07:01,344 [WARNING]  * Debugger is active!
+2025-10-25 16:07:01,346 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:03,782 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:03,946 [INFO]  * Restarting with stat
+2025-10-25 16:07:05,249 [WARNING]  * Debugger is active!
+2025-10-25 16:07:05,251 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:05,450 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:05,588 [INFO]  * Restarting with stat
+2025-10-25 16:07:06,709 [WARNING]  * Debugger is active!
+2025-10-25 16:07:06,711 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:07,968 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:08,104 [INFO]  * Restarting with stat
+2025-10-25 16:07:09,288 [WARNING]  * Debugger is active!
+2025-10-25 16:07:09,291 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:10,597 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:10,745 [INFO]  * Restarting with stat
+2025-10-25 16:07:11,896 [WARNING]  * Debugger is active!
+2025-10-25 16:07:11,899 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:16,502 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:16,647 [INFO]  * Restarting with stat
+2025-10-25 16:07:17,984 [WARNING]  * Debugger is active!
+2025-10-25 16:07:17,988 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:19,290 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:19,435 [INFO]  * Restarting with stat
+2025-10-25 16:07:20,571 [WARNING]  * Debugger is active!
+2025-10-25 16:07:20,574 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:21,847 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:22,020 [INFO]  * Restarting with stat
+2025-10-25 16:07:23,205 [WARNING]  * Debugger is active!
+2025-10-25 16:07:23,207 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:07:24,456 [INFO]  * Detected change in 'D:\\JOB\\PlagiarismStory\\app\\plagiarism\\checker.py', reloading
+2025-10-25 16:07:24,602 [INFO]  * Restarting with stat
+2025-10-25 16:07:25,837 [WARNING]  * Debugger is active!
+2025-10-25 16:07:25,839 [INFO]  * Debugger PIN: 763-747-109
+2025-10-25 16:09:12,037 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:12] "GET / HTTP/1.1" 200 -
+2025-10-25 16:09:12,088 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-25 16:09:12,287 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:12] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-10-25 16:09:19,338 [INFO] 
+Batch 1 (2 câu)...
+2025-10-25 16:09:20,969 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:09:25,235 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:09:25,236 [INFO] Model: gemini-2.5-flash-lite, Thời gian: 4.27s
+2025-10-25 16:09:25,238 [INFO] Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "CHA TÔI LÀ MỘT VỊ VUA VÀ LÀ HẬU DUỆ CỦA dòng dõi vua chúa.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQzI9XR2171B-zIws1dBp6GCc_3IH-0qnL11HTyEoSfTu6JYBE3X7QkW3hXf9aQNyOWDqds4GtbbGbpWLACGSTOZ-og-kmbX6SQJepGJvXjpnq7z-JTLUn5e-rv0Kl2H7OYtytNbotOWw5UQcOKDwzYQs8GoG4UAMEOI7ctert9XCLliRxvBhgJSyi-ArpDdOCkU3fpPpG",
+        "https://sachtruyen.cloud/truong-ca-achilles/"
+      ]
+    },
+    {
+      "query": "Ông là một người đàn ông thấp bé, như phần lớn dân tộc chúng tôi, và vạm vỡ như một con bò tót, vai u thịt bắp.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQzI9XR2171B-zIws1dBp6GCc_3IH-0qnL11HTyEoSfTu6JYBE3X7QkW3hXf9aQNyOWDqds4GtbbGbpWLACGSTOZ-og-kmbX6SQJepGJvXjpnq7z-JTLUn5e-rv0Kl2H7OYtytNbotOWw5UQcOKDwzYQs8GoG4UAMEOI7ctert9XCLliRxvBhgJSyi-ArpDdOCkU3fpPpG",
+        "https://sachtruyen.cloud/truong-ca-achilles/"
+      ]
+    }
+  ]
+}
+```
+
+2025-10-25 16:09:30,435 [INFO] 
+Batch 2 (1 câu)...
+2025-10-25 16:09:31,486 [INFO] AFC is enabled with max remote calls: 10.
+2025-10-25 16:09:35,710 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-25 16:09:35,713 [INFO] Model: gemini-2.5-flash, Thời gian: 4.23s
+2025-10-25 16:09:35,715 [INFO] Raw response:
+```json
+{
+  "results": [
+    {
+      "query": "Ông cưới mẹ tôi khi bà mười bốn tuổi và đã được nữ tư tế chứng giám rằng bà dễ hoài thai.",
+      "exists": true,
+      "links": [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbNfQafP_wEvaDJ7flviygsiPl5kKS6CIDtB9dLK8Ee9zWLz8dNaacc16IuM3M0ggSxEoU2Cr1wSKWY-6q7kwCJhMjMKg2Fbyzxq0U9mZNg68mt9ynh1wyCPcquAAacqi7yhAnAOFqQ_SaRh9shA3SmEXqhDtjXNHaW3ZiaQ1lUZHA5J_p6wfCqo7o6csh1yyAqHDTao1j"
+      ]
+    }
+  ]
+}
+```
+
+2025-10-25 16:09:39,105 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "POST / HTTP/1.1" 200 -
+2025-10-25 16:09:39,128 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "[36mGET /static/result.css HTTP/1.1[0m" 304 -
+2025-10-25 16:09:39,129 [INFO] 127.0.0.1 - - [25/Oct/2025 16:09:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
