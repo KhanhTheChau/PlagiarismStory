@@ -13,8 +13,7 @@
     />
   </head>
   <body>
-    <!-- HEADER (CỐ ĐỊNH) -->
-    <header>
+    <header class="site-header">
       <nav
         class="navbar navbar-expand-lg navbar-dark fixed-top"
         style="background-color: #f5a97f"
@@ -55,70 +54,82 @@
       </nav>
     </header>
 
-    <div class="header-space"></div>
-
-    <!-- KHU VỰC KẾT QUẢ -->
-    <div class="result-container">
+    <div class="main-container">
       <div class="left-panel">
         <h2 class="panel-title">📄 Nội dung gốc</h2>
         <div id="result-box" class="paper">{{ highlighted_text | safe }}</div>
         <button id="toggle-btn" class="toggle-btn">Xem toàn bộ</button>
       </div>
 
-      <div class="right-panel">
-        <div class="result-summary">
-          <h1>📊 Kết quả kiểm tra</h1>
-          <p>
-            Đã kiểm tra <strong>{{ limit_lines }}</strong> dòng đầu (hoặc ít hơn
-            nếu PDF ngắn hơn).
-          </p>
-          <p>
-            Tỉ lệ nghi đạo văn: <strong class="percent">{{ percent }}%</strong>
-          </p>
-          <div class="controls">
-            <a href="{{ url_for('index') }}" class="btn-back">← Quay lại</a>
+      <div class="middle-panel">
+        <div class="panel-box top-right-result">
+          <div class="result-summary">
+            <h1>📊 Kết quả kiểm tra</h1>
+            <p>Đã kiểm tra <strong>{{ limit_lines }}</strong> dòng đầu.</p>
+            <p>
+              Tỉ lệ nghi đạo văn:
+              <strong class="percent">{{ percent }}%</strong>
+            </p>
+            <div class="controls">
+              <a href="{{ url_for('index') }}" class="btn-back"
+                >← Kiểm tra nội dung khác</a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="result-details">
-          <h3>🔍 Chi tiết các dòng đã kiểm tra</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Dòng (tóm tắt)</th>
-                <th>Plagiarized</th>
-                <th>Nguồn</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for d in details %}
-              <tr>
-                <td>{{ loop.index }}</td>
-                <td style="max-width: 300px"><code>{{ d.line }}</code></td>
-                <td>{{ "Yes" if d.plagiarized else "No" }}</td>
-                <td>
-                  {% if d.sources %}
-                  <ul>
-                    {% for s in d.sources %}
-                    <li>
-                      <a href="{{ s }}" target="_blank" rel="noreferrer"
-                        >{{ s }}</a
-                      >
-                    </li>
-                    {% endfor %}
-                  </ul>
-                  {% else %} - {% endif %}
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+        <div class="panel-box under-right-result">
+          <div class="result-details">
+            <h1>🔍 Chi tiết kiểm tra từng dòng</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Dòng (tóm tắt)</th>
+                  <th>Plagiarized</th>
+                  <th>Nguồn</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for d in details %}
+                <tr>
+                  <td>{{ loop.index }}</td>
+                  <td style="max-width: 300px">
+                    <code style="color: #000000">{{ d.line }}</code>
+                  </td>
+                  <td>
+                    {% if d.plagiarized %}
+                      <span class="badge-yes">Có</span>
+                    {% else %}
+                      <span class="badge-no">Không</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if d.sources %}
+                    <ul>
+                      {% for s in d.sources %}
+                      <li>
+                        <a href="{{ s }}" target="_blank" rel="noreferrer"
+                          >{{ s }}</a
+                        >
+                      </li>
+                      {% endfor %}
+                    </ul>
+                    {% else %} - {% endif %}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+
+      <div class="right-panel">
+        <!-- Trống -->
       </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="main-footer">
       <p>© 2025 Plagiarism Checker | <b>Test Giao diện</b></p>
       <div class="footer-links">
@@ -132,7 +143,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Tooltip khi click vào highlight
         document.querySelectorAll("mark.plag").forEach((el) => {
           const sources = el.getAttribute("data-sources") || "";
           if (!sources) return;
@@ -143,7 +153,6 @@
           });
         });
 
-        // Toggle xem toàn bộ / thu gọn
         const toggleBtn = document.getElementById("toggle-btn");
         const resultBox = document.getElementById("result-box");
         toggleBtn.addEventListener("click", () => {
